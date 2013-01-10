@@ -11,4 +11,5 @@
 #import "MainDictionary.h"
 
 @interface AEMSecondViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end

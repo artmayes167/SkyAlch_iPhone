@@ -16,6 +16,7 @@
 +(MainDictionary *)sharedDictionary;
 -(NSArray *)getArrayForKey:(NSString *)string;
 -(void)setUpDictionary;
+-(NSArray *)getIngredients;
 -(NSString *)getIngredient:(int)num;
 -(NSArray *)getPotions;
 -(int)getPotionsCount;

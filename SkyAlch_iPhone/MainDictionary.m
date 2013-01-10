@@ -33,7 +33,7 @@ static MainDictionary *sharedDictionary;
 }
 
 -(void)setUpDictionary{
-    @autoreleasepool {
+    
         // Potions for Ingredients
         NSMutableArray *array = [[NSMutableArray alloc] initWithObjects:@"Fortify Restoration", @"Fortify Sneak", @"Weakness to Frost", @"Weakness to Poison", nil];
         [dictionary setValue:array forKey:@"Abecean Longfin"];
@@ -326,7 +326,10 @@ static MainDictionary *sharedDictionary;
         array = [NSMutableArray arrayWithObjects:@"Damage Stamina Regen", @"Fortify Health", @"Fortify Restoration", @"Resist Poison", nil];
         [dictionary setValue:array forKey:@"Yellow Mountain Flower"];
         array = nil;
-    }
+    
+}
+-(NSArray *)getIngredients{
+    return ingredients;
 }
 
 -(NSString *)getIngredient:(int)num{
@@ -345,7 +348,7 @@ static MainDictionary *sharedDictionary;
     return [potions objectAtIndex:i];
 }
 -(NSMutableArray *)getCompatibleIngredientsForIngredient:(NSString *)ing{
-    @autoreleasepool {
+    
         NSArray *array = [dictionary objectForKey:ing];
         NSMutableArray *newArray = [NSMutableArray new];
         for (NSString *string in array) {
@@ -367,10 +370,10 @@ static MainDictionary *sharedDictionary;
         [newArray sortUsingSelector:@selector(compare:)];
         array = nil;
         return newArray;
-    }
+    
 }
 -(NSMutableArray *)getIngredientsForPotion:(NSString *)string{
-    @autoreleasepool {
+    
         NSMutableArray *newArray = [[NSMutableArray alloc] init];
         for (int j = 0; j < [ingredients count]; ++j) {
             NSMutableArray *array = [dictionary objectForKey:[ingredients objectAtIndex:j]];
@@ -382,7 +385,7 @@ static MainDictionary *sharedDictionary;
             array = nil;
         }
         return newArray;
-    }
+    
 }
 
 @end

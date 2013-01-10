@@ -22,7 +22,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    @autoreleasepool {
+    
         static NSString *CellIdentifier = @"Cell";
         
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -33,11 +33,11 @@
         [[cell textLabel] setText:[potionsArray objectAtIndex: indexPath.row]];
         
         return cell;
-    }
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    @autoreleasepool {
+   
         NSArray *array = [[MainDictionary sharedDictionary] getIngredientsForPotion:[potionsArray objectAtIndex: indexPath.row]];
         NSString *ingredients = @"";
         for (NSString *string in array) {
@@ -46,14 +46,14 @@
         [ingredientsTV setText:ingredients];
         array = nil;
         ingredients = nil;
-    }
+    
 }
 
 
 #pragma mark - View lifecycle
 
 -(void)viewWillAppear:(BOOL)animated{
-    @autoreleasepool {
+   
         currentIngredient.text = currentIngredientString;
         
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
@@ -67,7 +67,7 @@
         indexPath = nil;
         ar = nil;
         ing = nil;
-    }
+    
     
     [super viewWillAppear:YES];
 }

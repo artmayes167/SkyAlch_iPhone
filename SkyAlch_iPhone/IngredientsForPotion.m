@@ -17,7 +17,6 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    @autoreleasepool {
         NSString *ing = @"";
         for (NSString *string in ingredientsArray) {
             ing = [ing stringByAppendingFormat:@"%@\n", string];
@@ -25,7 +24,7 @@
         [ingredientsTV setText:ing];
         [potionsLabel setText:currentPotionString];
         ing = nil;
-    }
+    
     [super viewWillAppear:animated];
 }
 

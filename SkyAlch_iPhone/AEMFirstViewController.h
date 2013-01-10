@@ -11,4 +11,5 @@
 #import "PotionsAndIngredients.h"
 
 @interface AEMFirstViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
