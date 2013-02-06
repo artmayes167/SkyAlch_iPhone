@@ -9,20 +9,28 @@
 #import "IngredientsForPotion.h"
 
 @implementation IngredientsForPotion
-@synthesize potionsLabel;
-@synthesize ingredientsTV;
-@synthesize ingredientsArray, currentPotionString;
+@synthesize potionsLabel = _potionsLabel;
+@synthesize ingredientsTV = _ingredientsTV;
+@synthesize ingredientsArray = _ingredientsArray;
+@synthesize currentPotionString = _currentPotionString;
 
 #pragma mark - View lifecycle
+
+
+-(void) setIngredientsArray:(NSArray *)ingredientsArray{
+    if(!_ingredientsArray) _ingredientsArray = [NSArray new];
+    _ingredientsArray = ingredientsArray;
+}
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
         NSString *ing = @"";
-        for (NSString *string in ingredientsArray) {
+        for (NSString *string in self.ingredientsArray) {
             ing = [ing stringByAppendingFormat:@"%@\n", string];
         }
-        [ingredientsTV setText:ing];
-        [potionsLabel setText:currentPotionString];
+        [self.ingredientsTV setText:ing];
+        [self.potionsLabel setText:self.currentPotionString];
         ing = nil;
     
     [super viewWillAppear:animated];

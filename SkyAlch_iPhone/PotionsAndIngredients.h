@@ -9,14 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "MainDictionary.h"
 
-@interface PotionsAndIngredients : UIViewController<UITableViewDelegate, UITableViewDataSource>{
-    NSArray *potionsArray;
-}
+@interface PotionsAndIngredients : UIViewController<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITextView *ingredientsTV;
 @property (weak, nonatomic) IBOutlet UITableView *potionsTable;
 @property (weak, nonatomic) IBOutlet UILabel *currentIngredient;
-@property (strong) NSArray *potionsArray;
-@property (strong) NSString *currentIngredientString;
+@property (strong, nonatomic) NSArray *potionsArray;
+@property (strong, nonatomic) NSString *currentIngredientString;
 - (IBAction)back:(id)sender;
 
 @end

@@ -9,11 +9,17 @@
 #import "PotionsAndIngredients.h"
 
 @implementation PotionsAndIngredients
-@synthesize ingredientsTV;
-@synthesize potionsTable;
-@synthesize currentIngredient;
-@synthesize potionsArray;
-@synthesize currentIngredientString;
+@synthesize ingredientsTV = _ingredientsTV;
+@synthesize potionsTable = _potionsTable;
+@synthesize currentIngredient = _currentIngredient;
+@synthesize potionsArray = _potionsArray;
+@synthesize currentIngredientString = _currentIngredientString;
+
+-(void)setPotionsArray:(NSArray *)potionsArray{
+    if (!_potionsArray) _potionsArray = [NSArray new];
+    
+    _potionsArray = potionsArray;
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{return 1;}
 
@@ -30,7 +36,7 @@
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         }
         
-        [[cell textLabel] setText:[potionsArray objectAtIndex: indexPath.row]];
+        [[cell textLabel] setText:[self.potionsArray objectAtIndex: indexPath.row]];
         
         return cell;
     
@@ -38,12 +44,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
    
-        NSArray *array = [[MainDictionary sharedDictionary] getIngredientsForPotion:[potionsArray objectAtIndex: indexPath.row]];
+        NSArray *array = [[MainDictionary sharedDictionary] getIngredientsForPotion:[self.potionsArray objectAtIndex: indexPath.row]];
         NSString *ingredients = @"";
         for (NSString *string in array) {
             ingredients = [ingredients stringByAppendingFormat:@"%@\n", string];
         }
-        [ingredientsTV setText:ingredients];
+        [self.ingredientsTV setText:ingredients];
         array = nil;
         ingredients = nil;
     
@@ -54,16 +60,16 @@
 
 -(void)viewWillAppear:(BOOL)animated{
    
-        currentIngredient.text = currentIngredientString;
+        self.currentIngredient.text = self.currentIngredientString;
         
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-        [potionsTable selectRowAtIndexPath:indexPath animated:NO scrollPosition: UITableViewScrollPositionNone];
-        NSArray *ar = [[MainDictionary sharedDictionary] getIngredientsForPotion:[potionsArray objectAtIndex: indexPath.row]];
+        [self.potionsTable selectRowAtIndexPath:indexPath animated:NO scrollPosition: UITableViewScrollPositionNone];
+        NSArray *ar = [[MainDictionary sharedDictionary] getIngredientsForPotion:[self.potionsArray objectAtIndex: indexPath.row]];
         NSString *ing = @"";
         for (NSString *string in ar) {
             ing = [ing stringByAppendingFormat:@"%@\n", string];
         }
-        [ingredientsTV setText:ing];
+        [self.ingredientsTV setText:ing];
         indexPath = nil;
         ar = nil;
         ing = nil;

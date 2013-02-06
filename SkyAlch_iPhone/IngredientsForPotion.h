@@ -11,8 +11,8 @@
 @interface IngredientsForPotion : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *potionsLabel;
 @property (weak, nonatomic) IBOutlet UITextView *ingredientsTV;
-@property (strong) NSArray *ingredientsArray;
-@property (strong) NSString *currentPotionString;
+@property (strong, nonatomic) NSArray *ingredientsArray;
+@property (strong, nonatomic) NSString *currentPotionString;
 
 - (IBAction)back:(id)sender;
 
