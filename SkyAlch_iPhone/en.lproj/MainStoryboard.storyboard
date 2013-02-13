@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--First View Controller - First-->
@@ -43,17 +43,21 @@
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ingredients" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="XEu-5a-kdc">
                                         <rect key="frame" x="111" y="11" width="85" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="SkyAlchIconRetina.png" id="zTG-kn-kMs">
+                                        <rect key="frame" x="1" y="0.0" width="42" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Ingredients" image="saltPile1.png" id="7"/>
+                    <tabBarItem key="tabBarItem" title="Ingredients" image="Bowlx30.png" id="7"/>
                     <connections>
                         <outlet property="tableView" destination="NiC-uo-dwN" id="tDE-S5-3ig"/>
                     </connections>
@@ -85,6 +89,10 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="SkyAlchIconRetina.png" id="h49-Iy-Ppi">
+                                        <rect key="frame" x="1" y="0.0" width="42" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -111,7 +119,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Potions" image="potion1.png" id="6"/>
+                    <tabBarItem key="tabBarItem" title="Potions" image="Potionx30.png" id="6"/>
                     <connections>
                         <outlet property="tableView" destination="OtR-4E-z8r" id="qFn-go-vxC"/>
                     </connections>
@@ -141,9 +149,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="potion1.png" width="30" height="30"/>
+        <image name="Bowlx30.png" width="30" height="30"/>
+        <image name="Potionx30.png" width="30" height="30"/>
+        <image name="SkyAlchIconRetina.png" width="114" height="114"/>
         <image name="roundEdgeBox.jpg" width="225" height="225"/>
-        <image name="saltPile1.png" width="30" height="30"/>
     </resources>
     <classes>
         <class className="AEMFirstViewController" superclassName="UIViewController">

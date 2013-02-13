@@ -10,6 +10,6 @@
 #import "MainDictionary.h"
 #import "PotionsAndIngredients.h"
 
-@interface AEMFirstViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface AEMFirstViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, PotionsAndIngredientsDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end

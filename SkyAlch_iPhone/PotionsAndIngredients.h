@@ -9,12 +9,20 @@
 #import <UIKit/UIKit.h>
 #import "MainDictionary.h"
 
+@class PotionsAndIngredients;
+
+@protocol PotionsAndIngredientsDelegate <NSObject>
+
+- (void)potionsAndIngredientsControllerShouldBeDismissed:(PotionsAndIngredients *)controller;
+
+@end
+
 @interface PotionsAndIngredients : UIViewController<UITableViewDelegate, UITableViewDataSource>
-@property (weak, nonatomic) IBOutlet UITextView *ingredientsTV;
-@property (weak, nonatomic) IBOutlet UITableView *potionsTable;
-@property (weak, nonatomic) IBOutlet UILabel *currentIngredient;
-@property (strong, nonatomic) NSArray *potionsArray;
+
 @property (strong, nonatomic) NSString *currentIngredientString;
+@property (strong, nonatomic) NSArray *potionsArray;
+@property (nonatomic, weak) id<PotionsAndIngredientsDelegate> delegate;
+
 - (IBAction)back:(id)sender;
 
 @end

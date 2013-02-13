@@ -24,8 +24,14 @@
 		C1458EEE15360A8A0017BDF4 /* MainDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = C1458EED15360A8A0017BDF4 /* MainDictionary.m */; };
 		C1458EF215360DA20017BDF4 /* IngredientsForPotion.m in Sources */ = {isa = PBXBuildFile; fileRef = C1458EF015360DA10017BDF4 /* IngredientsForPotion.m */; };
 		C1458EF315360DA20017BDF4 /* IngredientsForPotion.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1458EF115360DA20017BDF4 /* IngredientsForPotion.xib */; };
-		C1458F07153710B30017BDF4 /* potion1.png in Resources */ = {isa = PBXBuildFile; fileRef = C1458F05153710B30017BDF4 /* potion1.png */; };
-		C1458F08153710B30017BDF4 /* saltPile1.png in Resources */ = {isa = PBXBuildFile; fileRef = C1458F06153710B30017BDF4 /* saltPile1.png */; };
+		C1AFC74716CBF25C00E6FDAE /* Potion.png in Resources */ = {isa = PBXBuildFile; fileRef = C1AFC74616CBF25C00E6FDAE /* Potion.png */; };
+		C1AFC74916CBF30D00E6FDAE /* Potionx30.png in Resources */ = {isa = PBXBuildFile; fileRef = C1AFC74816CBF30D00E6FDAE /* Potionx30.png */; };
+		C1AFC74C16CBF4DB00E6FDAE /* Bowl.png in Resources */ = {isa = PBXBuildFile; fileRef = C1AFC74A16CBF4DB00E6FDAE /* Bowl.png */; };
+		C1AFC74D16CBF4DB00E6FDAE /* Bowlx30.png in Resources */ = {isa = PBXBuildFile; fileRef = C1AFC74B16CBF4DB00E6FDAE /* Bowlx30.png */; };
+		C1AFC74F16CC036100E6FDAE /* SkyAlchIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C1AFC74E16CC036100E6FDAE /* SkyAlchIcon.png */; };
+		C1AFC75116CC036700E6FDAE /* SkyAlchIconRetina.png in Resources */ = {isa = PBXBuildFile; fileRef = C1AFC75016CC036700E6FDAE /* SkyAlchIconRetina.png */; };
+		C1AFC75816CC13A700E6FDAE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C1AFC75616CC13A700E6FDAE /* Default.png */; };
+		C1AFC75916CC13A700E6FDAE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1AFC75716CC13A700E6FDAE /* Default@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,8 +61,14 @@
 		C1458EEF15360DA10017BDF4 /* IngredientsForPotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IngredientsForPotion.h; sourceTree = "<group>"; };
 		C1458EF015360DA10017BDF4 /* IngredientsForPotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IngredientsForPotion.m; sourceTree = "<group>"; };
 		C1458EF115360DA20017BDF4 /* IngredientsForPotion.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IngredientsForPotion.xib; sourceTree = "<group>"; };
-		C1458F05153710B30017BDF4 /* potion1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = potion1.png; sourceTree = "<group>"; };
-		C1458F06153710B30017BDF4 /* saltPile1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saltPile1.png; sourceTree = "<group>"; };
+		C1AFC74616CBF25C00E6FDAE /* Potion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Potion.png; sourceTree = "<group>"; };
+		C1AFC74816CBF30D00E6FDAE /* Potionx30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Potionx30.png; sourceTree = "<group>"; };
+		C1AFC74A16CBF4DB00E6FDAE /* Bowl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bowl.png; sourceTree = "<group>"; };
+		C1AFC74B16CBF4DB00E6FDAE /* Bowlx30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bowlx30.png; sourceTree = "<group>"; };
+		C1AFC74E16CC036100E6FDAE /* SkyAlchIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SkyAlchIcon.png; sourceTree = "<group>"; };
+		C1AFC75016CC036700E6FDAE /* SkyAlchIconRetina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SkyAlchIconRetina.png; sourceTree = "<group>"; };
+		C1AFC75616CC13A700E6FDAE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		C1AFC75716CC13A700E6FDAE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +88,8 @@
 		C1458EAC153607FD0017BDF4 = {
 			isa = PBXGroup;
 			children = (
+				C1AFC75016CC036700E6FDAE /* SkyAlchIconRetina.png */,
+				C1AFC74E16CC036100E6FDAE /* SkyAlchIcon.png */,
 				C1183611169F515400B0FD40 /* Default-568h@2x.png */,
 				C1458EC1153607FD0017BDF4 /* SkyAlch_iPhone */,
 				C1458EBA153607FD0017BDF4 /* Frameworks */,
@@ -127,8 +141,12 @@
 		C1458EC2153607FD0017BDF4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C1458F05153710B30017BDF4 /* potion1.png */,
-				C1458F06153710B30017BDF4 /* saltPile1.png */,
+				C1AFC75616CC13A700E6FDAE /* Default.png */,
+				C1AFC75716CC13A700E6FDAE /* Default@2x.png */,
+				C1AFC74A16CBF4DB00E6FDAE /* Bowl.png */,
+				C1AFC74B16CBF4DB00E6FDAE /* Bowlx30.png */,
+				C1AFC74816CBF30D00E6FDAE /* Potionx30.png */,
+				C1AFC74616CBF25C00E6FDAE /* Potion.png */,
 				C1458EE51536082D0017BDF4 /* roundEdgeBox.jpg */,
 				C1458EE3153608230017BDF4 /* blackButton.jpg */,
 				C1458EC3153607FD0017BDF4 /* SkyAlch_iPhone-Info.plist */,
@@ -165,7 +183,7 @@
 		C1458EAE153607FD0017BDF4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = C1458EB1153607FD0017BDF4 /* Build configuration list for PBXProject "SkyAlch_iPhone" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -195,9 +213,15 @@
 				C1458EE61536082D0017BDF4 /* roundEdgeBox.jpg in Resources */,
 				C1458EEB153608D80017BDF4 /* PotionsAndIngredients.xib in Resources */,
 				C1458EF315360DA20017BDF4 /* IngredientsForPotion.xib in Resources */,
-				C1458F07153710B30017BDF4 /* potion1.png in Resources */,
-				C1458F08153710B30017BDF4 /* saltPile1.png in Resources */,
 				C1183612169F515400B0FD40 /* Default-568h@2x.png in Resources */,
+				C1AFC74716CBF25C00E6FDAE /* Potion.png in Resources */,
+				C1AFC74916CBF30D00E6FDAE /* Potionx30.png in Resources */,
+				C1AFC74C16CBF4DB00E6FDAE /* Bowl.png in Resources */,
+				C1AFC74D16CBF4DB00E6FDAE /* Bowlx30.png in Resources */,
+				C1AFC74F16CC036100E6FDAE /* SkyAlchIcon.png in Resources */,
+				C1AFC75116CC036700E6FDAE /* SkyAlchIconRetina.png in Resources */,
+				C1AFC75816CC13A700E6FDAE /* Default.png in Resources */,
+				C1AFC75916CC13A700E6FDAE /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +270,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -259,6 +287,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
@@ -271,12 +300,17 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";

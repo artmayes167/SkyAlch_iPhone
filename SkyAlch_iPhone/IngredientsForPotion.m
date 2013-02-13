@@ -8,6 +8,12 @@
 
 #import "IngredientsForPotion.h"
 
+@interface IngredientsForPotion ()
+@property (weak, nonatomic) IBOutlet UILabel *potionsLabel;
+@property (weak, nonatomic) IBOutlet UITextView *ingredientsTV;
+
+@end
+
 @implementation IngredientsForPotion
 @synthesize potionsLabel = _potionsLabel;
 @synthesize ingredientsTV = _ingredientsTV;
@@ -54,6 +60,6 @@
 }
 
 - (IBAction)back:(id)sender {
-     [super dismissModalViewControllerAnimated:YES];
+    [self.delegate ingredientsForPotionShouldBeDismissed:self];
 }
 @end

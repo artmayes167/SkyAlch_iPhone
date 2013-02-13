@@ -8,11 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+@class IngredientsForPotion;
+
+@protocol IngredientsForPotionDelegate <NSObject>
+
+- (void)ingredientsForPotionShouldBeDismissed:(IngredientsForPotion *)controller;
+
+@end
+
 @interface IngredientsForPotion : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *potionsLabel;
-@property (weak, nonatomic) IBOutlet UITextView *ingredientsTV;
-@property (strong, nonatomic) NSArray *ingredientsArray;
+
 @property (strong, nonatomic) NSString *currentPotionString;
+@property (strong, nonatomic) NSArray *ingredientsArray;
+
+@property (nonatomic, weak) id<IngredientsForPotionDelegate> delegate;
 
 - (IBAction)back:(id)sender;
 

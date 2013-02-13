@@ -10,6 +10,11 @@
 
 @implementation AEMFirstViewController
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{return 1;}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -33,9 +38,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-        PotionsAndIngredients *newView = [[PotionsAndIngredients alloc] init];
-        newView.potionsArray = [[MainDictionary sharedDictionary] getArrayForKey:[[MainDictionary sharedDictionary] getIngredient: indexPath.row]];
-        newView.currentIngredientString = [[MainDictionary sharedDictionary] getIngredient: indexPath.row];
+    PotionsAndIngredients *newView = [[PotionsAndIngredients alloc] init];
+    newView.delegate = self;
+    newView.potionsArray = [[MainDictionary sharedDictionary] getArrayForKey:[[MainDictionary sharedDictionary] getIngredient: indexPath.row]];
+    newView.currentIngredientString = [[MainDictionary sharedDictionary] getIngredient: indexPath.row];
     if ([self respondsToSelector:@selector(presentViewController:animated:completion:)]) {
         [self presentViewController:newView animated:YES completion:NULL];
     } else {
@@ -51,10 +57,7 @@
         NSArray *ings = [[MainDictionary sharedDictionary] getIngredients];
         for (NSString *item in ings)
         {
-            if (![charactersForSort containsObject:[item substringToIndex:1]])
-            {
-                [charactersForSort addObject:[item substringToIndex:1]];
-            }
+            if (![charactersForSort containsObject:[item substringToIndex:1]]) [charactersForSort addObject:[item substringToIndex:1]];
         }
         return charactersForSort;
 }
@@ -74,6 +77,15 @@
         b++;
     }
     return b;
+}
+
+-(void)potionsAndIngredientsControllerShouldBeDismissed:(PotionsAndIngredients *)controller
+{
+    if ([self respondsToSelector:@selector(dismissViewControllerAnimated:completion:)]) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } else {
+        [self dismissModalViewControllerAnimated:YES];
+    }
 }
 
 - (void)viewDidUnload {

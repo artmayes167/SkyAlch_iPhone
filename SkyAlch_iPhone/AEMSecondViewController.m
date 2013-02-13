@@ -32,6 +32,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
         IngredientsForPotion *newView = [[IngredientsForPotion alloc] init];
+    newView.delegate = self;
         newView.ingredientsArray = [[MainDictionary sharedDictionary] getIngredientsForPotion:[[MainDictionary sharedDictionary] getPotion: indexPath.row]];
         newView.currentPotionString = [[MainDictionary sharedDictionary] getPotion: indexPath.row];
     if ([self respondsToSelector:@selector(presentViewController:animated:completion:)]) {
@@ -49,10 +50,7 @@
     NSArray *ings = [[MainDictionary sharedDictionary] getPotions];
     for (NSString *item in ings)
     {
-        if (![charactersForSort containsObject:[item substringToIndex:1]])
-        {
-            [charactersForSort addObject:[item substringToIndex:1]];
-        }
+        if (![charactersForSort containsObject:[item substringToIndex:1]]) [charactersForSort addObject:[item substringToIndex:1]];
     }
     return charactersForSort;
 }
@@ -72,6 +70,15 @@
         b++;
     }
     return b;
+}
+
+-(void)ingredientsForPotionShouldBeDismissed:(IngredientsForPotion *)controller
+{
+    if ([self respondsToSelector:@selector(dismissViewControllerAnimated:completion:)]) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } else {
+        [self dismissModalViewControllerAnimated:YES];
+    }
 }
 
 - (void)viewDidUnload {

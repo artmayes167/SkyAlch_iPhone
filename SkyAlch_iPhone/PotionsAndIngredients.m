@@ -8,6 +8,13 @@
 
 #import "PotionsAndIngredients.h"
 
+@interface PotionsAndIngredients ()
+@property (weak, nonatomic) IBOutlet UITextView *ingredientsTV;
+@property (weak, nonatomic) IBOutlet UITableView *potionsTable;
+@property (weak, nonatomic) IBOutlet UILabel *currentIngredient;
+
+@end
+
 @implementation PotionsAndIngredients
 @synthesize ingredientsTV = _ingredientsTV;
 @synthesize potionsTable = _potionsTable;
@@ -97,6 +104,6 @@
 }
 
 - (IBAction)back:(id)sender {
-    [super dismissModalViewControllerAnimated:YES];
+    [self.delegate potionsAndIngredientsControllerShouldBeDismissed:self];
 }
 @end
