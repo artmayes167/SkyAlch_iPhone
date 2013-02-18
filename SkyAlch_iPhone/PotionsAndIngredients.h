@@ -23,6 +23,4 @@
 @property (strong, nonatomic) NSArray *potionsArray;
 @property (nonatomic, weak) id<PotionsAndIngredientsDelegate> delegate;
 
-- (IBAction)back:(id)sender;
-
 @end

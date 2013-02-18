@@ -23,6 +23,4 @@
 
 @property (nonatomic, weak) id<IngredientsForPotionDelegate> delegate;
 
-- (IBAction)back:(id)sender;
-
 @end

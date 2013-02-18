@@ -59,7 +59,7 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrame">{{20, 50}, {280, 175}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSNextKeyView"/>
+						<reference key="NSNextKeyView" ref="384752815"/>
 						<string key="NSReuseIdentifierKey">_NS:418</string>
 						<object class="NSColor" key="IBUIBackgroundColor" id="345703296">
 							<int key="NSColorSpace">3</int>
@@ -84,7 +84,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{96, 10}, {128, 21}}</string>
 								<reference key="NSSuperview" ref="465692876"/>
-								<reference key="NSNextKeyView" ref="846309074"/>
+								<reference key="NSNextKeyView" ref="214824740"/>
 								<string key="NSReuseIdentifierKey">_NS:328</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -113,7 +113,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{20, 0}, {42, 42}}</string>
 								<reference key="NSSuperview" ref="465692876"/>
-								<reference key="NSNextKeyView" ref="214824740"/>
+								<reference key="NSNextKeyView" ref="708737845"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -125,7 +125,7 @@
 						</array>
 						<string key="NSFrameSize">{320, 42}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSNextKeyView" ref="708737845"/>
+						<reference key="NSNextKeyView" ref="846309074"/>
 						<string key="NSReuseIdentifierKey">_NS:10</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -189,6 +189,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{125, 400}, {70, 40}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:225</string>
 						<reference key="IBUIBackgroundColor" ref="842288889"/>
 						<bool key="IBUIOpaque">NO</bool>

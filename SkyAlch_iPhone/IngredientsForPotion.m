@@ -11,7 +11,7 @@
 @interface IngredientsForPotion ()
 @property (weak, nonatomic) IBOutlet UILabel *potionsLabel;
 @property (weak, nonatomic) IBOutlet UITextView *ingredientsTV;
-
+- (IBAction)back:(id)sender;
 @end
 
 @implementation IngredientsForPotion

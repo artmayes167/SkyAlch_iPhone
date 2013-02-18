@@ -12,7 +12,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *ingredientsTV;
 @property (weak, nonatomic) IBOutlet UITableView *potionsTable;
 @property (weak, nonatomic) IBOutlet UILabel *currentIngredient;
-
+- (IBAction)back:(id)sender;
 @end
 
 @implementation PotionsAndIngredients

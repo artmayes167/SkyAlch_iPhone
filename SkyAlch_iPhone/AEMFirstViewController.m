@@ -52,11 +52,9 @@
     newView.potionsArray = [[MainDictionary sharedDictionary] getArrayForKey:[[MainDictionary sharedDictionary] getIngredient: indexPath.row]];
     newView.currentIngredientString = [[MainDictionary sharedDictionary] getIngredient: indexPath.row];
     newView.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    if ([self respondsToSelector:@selector(presentViewController:animated:completion:)]) {
-        [self presentViewController:newView animated:YES completion:NULL];
-    } else {
-        [self presentModalViewController:newView animated:YES];
-    }
+   
+    [self presentViewController:newView animated:YES completion:NULL];
+    
 }
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
@@ -89,10 +87,6 @@
 
 -(void)potionsAndIngredientsControllerShouldBeDismissed:(PotionsAndIngredients *)controller
 {
-    if ([self respondsToSelector:@selector(dismissViewControllerAnimated:completion:)]) {
-        [self dismissViewControllerAnimated:YES completion:nil];
-    } else {
-        [self dismissModalViewControllerAnimated:YES];
-    }
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end
