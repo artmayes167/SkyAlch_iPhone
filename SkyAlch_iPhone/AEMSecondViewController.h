@@ -11,5 +11,4 @@
 #import "MainDictionary.h"
 
 @interface AEMSecondViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, IngredientsForPotionDelegate>
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end

@@ -7,12 +7,19 @@
 //
 
 #import "AEMFirstViewController.h" // Ingredients
+@interface AEMFirstViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@end
+
 
 @implementation AEMFirstViewController
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    CGFloat screenScale = [[UIScreen mainScreen] scale];
+    if (screenScale == 2.0f) self.tabBarItem.image = [UIImage imageNamed:@"Bowl.png"];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{return 1;}
@@ -22,16 +29,18 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    static NSString *CellIdentifier = @"Cell";
+        
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
     
-        static NSString *CellIdentifier = @"Cell";
-        
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        if (cell == nil) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        }
-        
-        [[cell textLabel] setText:[[MainDictionary sharedDictionary] getIngredient: indexPath.row]];
-        return cell;
+    [cell textLabel].lineBreakMode = NSLineBreakByWordWrapping;
+    [cell textLabel].numberOfLines = 0;
+    [cell textLabel].font = [UIFont fontWithName:@"Helvetica Bold" size:16.0];
+    [[cell textLabel] setText:[[MainDictionary sharedDictionary] getIngredient: indexPath.row]];
+    return cell;
     
 }
 
@@ -42,41 +51,40 @@
     newView.delegate = self;
     newView.potionsArray = [[MainDictionary sharedDictionary] getArrayForKey:[[MainDictionary sharedDictionary] getIngredient: indexPath.row]];
     newView.currentIngredientString = [[MainDictionary sharedDictionary] getIngredient: indexPath.row];
+    newView.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     if ([self respondsToSelector:@selector(presentViewController:animated:completion:)]) {
         [self presentViewController:newView animated:YES completion:NULL];
     } else {
         [self presentModalViewController:newView animated:YES];
     }
-    
-        newView = nil;
-    
 }
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
-        NSMutableArray *charactersForSort = [[NSMutableArray alloc] init];
-        NSArray *ings = [[MainDictionary sharedDictionary] getIngredients];
-        for (NSString *item in ings)
-        {
-            if (![charactersForSort containsObject:[item substringToIndex:1]]) [charactersForSort addObject:[item substringToIndex:1]];
-        }
-        return charactersForSort;
+    NSMutableArray *charactersForSort = [[NSMutableArray alloc] init];
+    NSArray *allIngredients = [[MainDictionary sharedDictionary] getIngredients];
+    for (NSString *item in allIngredients)
+    {
+        if (![charactersForSort containsObject:[item substringToIndex:1]]) [charactersForSort addObject:[item substringToIndex:1]];
+    }
+    return charactersForSort;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
     BOOL found = NO;
-    NSInteger b = 0;
-    NSArray *ings = [[MainDictionary sharedDictionary] getIngredients];
-    for (NSString *item in ings)
+    NSUInteger rowToScrollTo = 0;
+    NSArray *allIngredients = [[MainDictionary sharedDictionary] getIngredients];
+    for (NSString *item in allIngredients)
     {
         if ([[item substringToIndex:1] isEqualToString:title])
             if (!found)
             {
-                [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:b inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
+                [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:rowToScrollTo inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
                 found = YES;
+                return rowToScrollTo;
             }
-        b++;
+        rowToScrollTo++;
     }
-    return b;
+    return rowToScrollTo;
 }
 
 -(void)potionsAndIngredientsControllerShouldBeDismissed:(PotionsAndIngredients *)controller
@@ -86,10 +94,5 @@
     } else {
         [self dismissModalViewControllerAnimated:YES];
     }
-}
-
-- (void)viewDidUnload {
-    [self setTableView:nil];
-    [super viewDidUnload];
 }
 @end

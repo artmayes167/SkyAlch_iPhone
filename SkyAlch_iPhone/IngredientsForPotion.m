@@ -31,32 +31,19 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-        NSString *ing = @"";
-        for (NSString *string in self.ingredientsArray) {
-            ing = [ing stringByAppendingFormat:@"%@\n", string];
-        }
-        [self.ingredientsTV setText:ing];
-        [self.potionsLabel setText:self.currentPotionString];
-        ing = nil;
-    
     [super viewWillAppear:animated];
+    
+    [self.ingredientsTV setText:[self.ingredientsArray componentsJoinedByString:@"\n"]];
+    [self.potionsLabel setText:self.currentPotionString];
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    
     [self setPotionsLabel:nil];
     [self setIngredientsTV:nil];
     [self setIngredientsArray:nil];
     [self setCurrentPotionString:nil];
-    [super viewWillDisappear:YES];
-}
-
-- (void)viewDidUnload
-{
-    [self setPotionsLabel:nil];
-    [self setIngredientsTV:nil];
-    [self setIngredientsArray:nil];
-    [self setCurrentPotionString:nil];
-    [super viewDidUnload];
 }
 
 - (IBAction)back:(id)sender {

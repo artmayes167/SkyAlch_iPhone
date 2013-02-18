@@ -17,13 +17,12 @@
 		C1458ECF153607FE0017BDF4 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1458ECD153607FE0017BDF4 /* MainStoryboard.storyboard */; };
 		C1458ED2153607FE0017BDF4 /* AEMFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1458ED1153607FE0017BDF4 /* AEMFirstViewController.m */; };
 		C1458ED9153607FE0017BDF4 /* AEMSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1458ED8153607FE0017BDF4 /* AEMSecondViewController.m */; };
-		C1458EE4153608230017BDF4 /* blackButton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1458EE3153608230017BDF4 /* blackButton.jpg */; };
-		C1458EE61536082D0017BDF4 /* roundEdgeBox.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1458EE51536082D0017BDF4 /* roundEdgeBox.jpg */; };
 		C1458EEA153608D80017BDF4 /* PotionsAndIngredients.m in Sources */ = {isa = PBXBuildFile; fileRef = C1458EE8153608D80017BDF4 /* PotionsAndIngredients.m */; };
 		C1458EEB153608D80017BDF4 /* PotionsAndIngredients.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1458EE9153608D80017BDF4 /* PotionsAndIngredients.xib */; };
 		C1458EEE15360A8A0017BDF4 /* MainDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = C1458EED15360A8A0017BDF4 /* MainDictionary.m */; };
 		C1458EF215360DA20017BDF4 /* IngredientsForPotion.m in Sources */ = {isa = PBXBuildFile; fileRef = C1458EF015360DA10017BDF4 /* IngredientsForPotion.m */; };
 		C1458EF315360DA20017BDF4 /* IngredientsForPotion.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1458EF115360DA20017BDF4 /* IngredientsForPotion.xib */; };
+		C199DCFF16CD65EB003713B6 /* InitialTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C199DCFE16CD65EB003713B6 /* InitialTabBarViewController.m */; };
 		C1AFC74716CBF25C00E6FDAE /* Potion.png in Resources */ = {isa = PBXBuildFile; fileRef = C1AFC74616CBF25C00E6FDAE /* Potion.png */; };
 		C1AFC74916CBF30D00E6FDAE /* Potionx30.png in Resources */ = {isa = PBXBuildFile; fileRef = C1AFC74816CBF30D00E6FDAE /* Potionx30.png */; };
 		C1AFC74C16CBF4DB00E6FDAE /* Bowl.png in Resources */ = {isa = PBXBuildFile; fileRef = C1AFC74A16CBF4DB00E6FDAE /* Bowl.png */; };
@@ -32,10 +31,16 @@
 		C1AFC75116CC036700E6FDAE /* SkyAlchIconRetina.png in Resources */ = {isa = PBXBuildFile; fileRef = C1AFC75016CC036700E6FDAE /* SkyAlchIconRetina.png */; };
 		C1AFC75816CC13A700E6FDAE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C1AFC75616CC13A700E6FDAE /* Default.png */; };
 		C1AFC75916CC13A700E6FDAE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1AFC75716CC13A700E6FDAE /* Default@2x.png */; };
+		C1C6EBAE16D2602500D9324C /* items.plist in Resources */ = {isa = PBXBuildFile; fileRef = C1C6EBAD16D2602500D9324C /* items.plist */; };
+		C1C6EBB316D2A7EC00D9324C /* SkyAlchIcon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = C1C6EBAF16D2A7EC00D9324C /* SkyAlchIcon-72.png */; };
+		C1C6EBB416D2A7EC00D9324C /* SkyAlchIcon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = C1C6EBB016D2A7EC00D9324C /* SkyAlchIcon-Small-50.png */; };
+		C1C6EBB516D2A7EC00D9324C /* SkyAlchIcon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = C1C6EBB116D2A7EC00D9324C /* SkyAlchIcon-Small.png */; };
+		C1C6EBB616D2A7EC00D9324C /* SkyAlchIcon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1C6EBB216D2A7EC00D9324C /* SkyAlchIcon-Small@2x.png */; };
+		C1C6EBB816D2A83500D9324C /* roundEdgeBox.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1C6EBB716D2A83400D9324C /* roundEdgeBox.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C1183611169F515400B0FD40 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C1183611169F515400B0FD40 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		C1458EB7153607FD0017BDF4 /* SkyAlch_iPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyAlch_iPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1458EBB153607FD0017BDF4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C1458EBD153607FD0017BDF4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -51,8 +56,6 @@
 		C1458ED1153607FE0017BDF4 /* AEMFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEMFirstViewController.m; sourceTree = "<group>"; };
 		C1458ED7153607FE0017BDF4 /* AEMSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEMSecondViewController.h; sourceTree = "<group>"; };
 		C1458ED8153607FE0017BDF4 /* AEMSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEMSecondViewController.m; sourceTree = "<group>"; };
-		C1458EE3153608230017BDF4 /* blackButton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blackButton.jpg; sourceTree = "<group>"; };
-		C1458EE51536082D0017BDF4 /* roundEdgeBox.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = roundEdgeBox.jpg; sourceTree = "<group>"; };
 		C1458EE7153608D80017BDF4 /* PotionsAndIngredients.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PotionsAndIngredients.h; sourceTree = "<group>"; };
 		C1458EE8153608D80017BDF4 /* PotionsAndIngredients.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PotionsAndIngredients.m; sourceTree = "<group>"; };
 		C1458EE9153608D80017BDF4 /* PotionsAndIngredients.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PotionsAndIngredients.xib; sourceTree = "<group>"; };
@@ -61,14 +64,22 @@
 		C1458EEF15360DA10017BDF4 /* IngredientsForPotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IngredientsForPotion.h; sourceTree = "<group>"; };
 		C1458EF015360DA10017BDF4 /* IngredientsForPotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IngredientsForPotion.m; sourceTree = "<group>"; };
 		C1458EF115360DA20017BDF4 /* IngredientsForPotion.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IngredientsForPotion.xib; sourceTree = "<group>"; };
+		C199DCFD16CD65EB003713B6 /* InitialTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialTabBarViewController.h; sourceTree = "<group>"; };
+		C199DCFE16CD65EB003713B6 /* InitialTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialTabBarViewController.m; sourceTree = "<group>"; };
 		C1AFC74616CBF25C00E6FDAE /* Potion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Potion.png; sourceTree = "<group>"; };
 		C1AFC74816CBF30D00E6FDAE /* Potionx30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Potionx30.png; sourceTree = "<group>"; };
 		C1AFC74A16CBF4DB00E6FDAE /* Bowl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bowl.png; sourceTree = "<group>"; };
 		C1AFC74B16CBF4DB00E6FDAE /* Bowlx30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bowlx30.png; sourceTree = "<group>"; };
-		C1AFC74E16CC036100E6FDAE /* SkyAlchIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SkyAlchIcon.png; sourceTree = "<group>"; };
-		C1AFC75016CC036700E6FDAE /* SkyAlchIconRetina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SkyAlchIconRetina.png; sourceTree = "<group>"; };
+		C1AFC74E16CC036100E6FDAE /* SkyAlchIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SkyAlchIcon.png; path = ../SkyAlchIcon.png; sourceTree = "<group>"; };
+		C1AFC75016CC036700E6FDAE /* SkyAlchIconRetina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SkyAlchIconRetina.png; path = ../SkyAlchIconRetina.png; sourceTree = "<group>"; };
 		C1AFC75616CC13A700E6FDAE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		C1AFC75716CC13A700E6FDAE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		C1C6EBAD16D2602500D9324C /* items.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = items.plist; sourceTree = "<group>"; };
+		C1C6EBAF16D2A7EC00D9324C /* SkyAlchIcon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SkyAlchIcon-72.png"; sourceTree = "<group>"; };
+		C1C6EBB016D2A7EC00D9324C /* SkyAlchIcon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SkyAlchIcon-Small-50.png"; sourceTree = "<group>"; };
+		C1C6EBB116D2A7EC00D9324C /* SkyAlchIcon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SkyAlchIcon-Small.png"; sourceTree = "<group>"; };
+		C1C6EBB216D2A7EC00D9324C /* SkyAlchIcon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SkyAlchIcon-Small@2x.png"; sourceTree = "<group>"; };
+		C1C6EBB716D2A83400D9324C /* roundEdgeBox.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = roundEdgeBox.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,9 +99,6 @@
 		C1458EAC153607FD0017BDF4 = {
 			isa = PBXGroup;
 			children = (
-				C1AFC75016CC036700E6FDAE /* SkyAlchIconRetina.png */,
-				C1AFC74E16CC036100E6FDAE /* SkyAlchIcon.png */,
-				C1183611169F515400B0FD40 /* Default-568h@2x.png */,
 				C1458EC1153607FD0017BDF4 /* SkyAlch_iPhone */,
 				C1458EBA153607FD0017BDF4 /* Frameworks */,
 				C1458EB8153607FD0017BDF4 /* Products */,
@@ -120,6 +128,8 @@
 			children = (
 				C1458ECA153607FD0017BDF4 /* AEMAppDelegate.h */,
 				C1458ECB153607FD0017BDF4 /* AEMAppDelegate.m */,
+				C199DCFD16CD65EB003713B6 /* InitialTabBarViewController.h */,
+				C199DCFE16CD65EB003713B6 /* InitialTabBarViewController.m */,
 				C1458ED0153607FE0017BDF4 /* AEMFirstViewController.h */,
 				C1458ED1153607FE0017BDF4 /* AEMFirstViewController.m */,
 				C1458ED7153607FE0017BDF4 /* AEMSecondViewController.h */,
@@ -141,18 +151,25 @@
 		C1458EC2153607FD0017BDF4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C1C6EBB716D2A83400D9324C /* roundEdgeBox.jpg */,
+				C1C6EBAF16D2A7EC00D9324C /* SkyAlchIcon-72.png */,
+				C1C6EBB016D2A7EC00D9324C /* SkyAlchIcon-Small-50.png */,
+				C1C6EBB116D2A7EC00D9324C /* SkyAlchIcon-Small.png */,
+				C1C6EBB216D2A7EC00D9324C /* SkyAlchIcon-Small@2x.png */,
+				C1AFC75016CC036700E6FDAE /* SkyAlchIconRetina.png */,
+				C1AFC74E16CC036100E6FDAE /* SkyAlchIcon.png */,
+				C1183611169F515400B0FD40 /* Default-568h@2x.png */,
 				C1AFC75616CC13A700E6FDAE /* Default.png */,
 				C1AFC75716CC13A700E6FDAE /* Default@2x.png */,
 				C1AFC74A16CBF4DB00E6FDAE /* Bowl.png */,
 				C1AFC74B16CBF4DB00E6FDAE /* Bowlx30.png */,
 				C1AFC74816CBF30D00E6FDAE /* Potionx30.png */,
 				C1AFC74616CBF25C00E6FDAE /* Potion.png */,
-				C1458EE51536082D0017BDF4 /* roundEdgeBox.jpg */,
-				C1458EE3153608230017BDF4 /* blackButton.jpg */,
 				C1458EC3153607FD0017BDF4 /* SkyAlch_iPhone-Info.plist */,
 				C1458EC4153607FD0017BDF4 /* InfoPlist.strings */,
 				C1458EC7153607FD0017BDF4 /* main.m */,
 				C1458EC9153607FD0017BDF4 /* SkyAlch_iPhone-Prefix.pch */,
+				C1C6EBAD16D2602500D9324C /* items.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -160,9 +177,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C1458EB6153607FD0017BDF4 /* SkyAlch_iPhone */ = {
+		C1458EB6153607FD0017BDF4 /* SkyAlch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C1458EE0153607FE0017BDF4 /* Build configuration list for PBXNativeTarget "SkyAlch_iPhone" */;
+			buildConfigurationList = C1458EE0153607FE0017BDF4 /* Build configuration list for PBXNativeTarget "SkyAlch" */;
 			buildPhases = (
 				C1458EB3153607FD0017BDF4 /* Sources */,
 				C1458EB4153607FD0017BDF4 /* Frameworks */,
@@ -172,7 +189,7 @@
 			);
 			dependencies = (
 			);
-			name = SkyAlch_iPhone;
+			name = SkyAlch;
 			productName = SkyAlch_iPhone;
 			productReference = C1458EB7153607FD0017BDF4 /* SkyAlch_iPhone.app */;
 			productType = "com.apple.product-type.application";
@@ -197,7 +214,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C1458EB6153607FD0017BDF4 /* SkyAlch_iPhone */,
+				C1458EB6153607FD0017BDF4 /* SkyAlch */,
 			);
 		};
 /* End PBXProject section */
@@ -209,8 +226,6 @@
 			files = (
 				C1458EC6153607FD0017BDF4 /* InfoPlist.strings in Resources */,
 				C1458ECF153607FE0017BDF4 /* MainStoryboard.storyboard in Resources */,
-				C1458EE4153608230017BDF4 /* blackButton.jpg in Resources */,
-				C1458EE61536082D0017BDF4 /* roundEdgeBox.jpg in Resources */,
 				C1458EEB153608D80017BDF4 /* PotionsAndIngredients.xib in Resources */,
 				C1458EF315360DA20017BDF4 /* IngredientsForPotion.xib in Resources */,
 				C1183612169F515400B0FD40 /* Default-568h@2x.png in Resources */,
@@ -222,6 +237,12 @@
 				C1AFC75116CC036700E6FDAE /* SkyAlchIconRetina.png in Resources */,
 				C1AFC75816CC13A700E6FDAE /* Default.png in Resources */,
 				C1AFC75916CC13A700E6FDAE /* Default@2x.png in Resources */,
+				C1C6EBAE16D2602500D9324C /* items.plist in Resources */,
+				C1C6EBB316D2A7EC00D9324C /* SkyAlchIcon-72.png in Resources */,
+				C1C6EBB416D2A7EC00D9324C /* SkyAlchIcon-Small-50.png in Resources */,
+				C1C6EBB516D2A7EC00D9324C /* SkyAlchIcon-Small.png in Resources */,
+				C1C6EBB616D2A7EC00D9324C /* SkyAlchIcon-Small@2x.png in Resources */,
+				C1C6EBB816D2A83500D9324C /* roundEdgeBox.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +260,7 @@
 				C1458EEA153608D80017BDF4 /* PotionsAndIngredients.m in Sources */,
 				C1458EEE15360A8A0017BDF4 /* MainDictionary.m in Sources */,
 				C1458EF215360DA20017BDF4 /* IngredientsForPotion.m in Sources */,
+				C199DCFF16CD65EB003713B6 /* InitialTabBarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +312,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = $SkyAlch;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -314,6 +337,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = $SkyAlch;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -353,7 +377,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C1458EE0153607FE0017BDF4 /* Build configuration list for PBXNativeTarget "SkyAlch_iPhone" */ = {
+		C1458EE0153607FE0017BDF4 /* Build configuration list for PBXNativeTarget "SkyAlch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C1458EE1153607FE0017BDF4 /* Debug */,

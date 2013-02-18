@@ -8,14 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MainDictionary : NSObject{
-    NSMutableDictionary *dictionary;
-    NSArray *ingredients, *potions;
-}
+@interface MainDictionary : NSObject
 
 +(MainDictionary *)sharedDictionary;
 -(NSArray *)getArrayForKey:(NSString *)string;
--(void)setUpDictionary;
 -(NSArray *)getIngredients;
 -(NSString *)getIngredient:(int)num;
 -(NSArray *)getPotions;

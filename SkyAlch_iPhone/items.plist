@@ -1,0 +1,1352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Ingredients</key>
+        <array>
+            <string>Abecean Longfin</string>
+            <string>Ash Creep Cluster</string>
+            <string>Ash Hopper Jelly</string>
+            <string>Ashen Grass Pod</string>
+            <string>Bear Claws</string>
+            <string>Bee</string>
+            <string>Beehive Husk</string>
+            <string>Berit's Ashes</string>
+            <string>Blisterwort</string>
+            <string>Bleeding Crown</string>
+            <string>Blue Butterfly Wing</string>
+            <string>Blue Dartwing</string>
+            <string>Blue Mountain Flower</string>
+            <string>Boar Tusk</string>
+            <string>Bone Meal</string>
+            <string>Briar Heart</string>
+            <string>Burnt Spriggan Wood</string>
+            <string>Butterfly Wing</string>
+            <string>Canis Root</string>
+            <string>Charred Skeever Hide</string>
+            <string>Chaurus Eggs</string>
+            <string>Chaurus Hunter Antennae</string>
+            <string>Chicken's Egg</string>
+            <string>Creep Cluster</string>
+            <string>Crimson Nirnroot</string>
+            <string>Cyrodilic Spadetail</string>
+            <string>Daedra Heart</string>
+            <string>Deathbell</string>
+            <string>Dragon's Tongue</string>
+            <string>Dwarven Oil</string>
+            <string>Ectoplasm</string>
+            <string>Elves Ear</string>
+            <string>Emperor Parasol Moss</string>
+            <string>Eye of Sabre Cat</string>
+            <string>Falmer Ear</string>
+            <string>Felsaad Tern Feathers</string>
+            <string>Fire Salts</string>
+            <string>Fly Amanita</string>
+            <string>Frost Mirriam</string>
+            <string>Frost Salts</string>
+            <string>Garlic</string>
+            <string>Giant Lichen</string>
+            <string>Giant's Toe</string>
+            <string>Gleamblossom</string>
+            <string>Glow Dust</string>
+            <string>Glowing Mushroom</string>
+            <string>Grass Pod</string>
+            <string>Hagraven Claw</string>
+            <string>Hagraven Feathers</string>
+            <string>Hanging Moss</string>
+            <string>Hawk Beak</string>
+            <string>Hawk Feathers</string>
+            <string>Histcarp</string>
+            <string>Honeycomb</string>
+            <string>Human Flesh</string>
+            <string>Human Heart</string>
+            <string>Ice Wraith Teeth</string>
+            <string>Imp Stool</string>
+            <string>Jarrin Root</string>
+            <string>Jazbay Grapes</string>
+            <string>Juniper Berries</string>
+            <string>Large Antlers</string>
+            <string>Lavender</string>
+            <string>Luna Moth Wing</string>
+            <string>Moon Sugar</string>
+            <string>Mora Tapinella</string>
+            <string>Mudcrab Chitin</string>
+            <string>Namira's Rot</string>
+            <string>Netch Jelly</string>
+            <string>Nightshade</string>
+            <string>Nirnroot</string>
+            <string>Nordic Barnacle</string>
+            <string>Orange Dartwing</string>
+            <string>Pearl</string>
+            <string>Pine Thrush Egg</string>
+            <string>Poison Bloom</string>
+            <string>Powdered Mammoth Tusk</string>
+            <string>Purple Mountain Flower</string>
+            <string>Red Mountain Flower</string>
+            <string>River Betty</string>
+            <string>Rock Warbler Egg</string>
+            <string>Sabre Cat Tooth</string>
+            <string>Salt Pile</string>
+            <string>Scaly Pholiata</string>
+            <string>Scathecraw</string>
+            <string>Silverside Perch</string>
+            <string>Skeever Tail</string>
+            <string>Slaughterfish Egg</string>
+            <string>Slaughterfish Scales</string>
+            <string>Small Antlers</string>
+            <string>Small Pearl</string>
+            <string>Snowberries</string>
+            <string>Spawn Ash</string>
+            <string>Spider Egg</string>
+            <string>Spriggan Sap</string>
+            <string>Swamp Fungal Pod</string>
+            <string>Taproot</string>
+            <string>Thistle Branch</string>
+            <string>Torchbug Thorax</string>
+            <string>Trama Root</string>
+            <string>Troll Fat</string>
+            <string>Tundra Cotton</string>
+            <string>Vampire Dust</string>
+            <string>Void Salts</string>
+            <string>Wheat</string>
+            <string>White Cap</string>
+            <string>Wisp Wrappings</string>
+            <string>Yellow Mountain Flower</string>
+        </array>
+        <key>Potions</key>
+        <array>
+            <string>Cure Disease</string>
+            <string>Damage Health</string>
+            <string>Damage Magicka</string>
+            <string>Damage Magicka Regen</string>
+            <string>Damage Stamina</string>
+            <string>Damage Stamina Regen</string>
+            <string>Fear</string>
+            <string>Fortify Alteration</string>
+            <string>Fortify Barter</string>
+            <string>Fortify Block</string>
+            <string>Fortify Carry Weight</string>
+            <string>Fortify Conjuration</string>
+            <string>Fortify Destruction</string>
+            <string>Fortify Enchanting</string>
+            <string>Fortify Health</string>
+            <string>Fortify Heavy Armor</string>
+            <string>Fortify Illusion</string>
+            <string>Fortify Light Armor</string>
+            <string>Fortify Lockpicking</string>
+            <string>Fortify Magicka</string>
+            <string>Fortify Marksman</string>
+            <string>Fortify One-Handed</string>
+            <string>Fortify Pickpocket</string>
+            <string>Fortify Restoration</string>
+            <string>Fortify Smithing</string>
+            <string>Fortify Sneak</string>
+            <string>Fortify Stamina</string>
+            <string>Fortify Two-handed</string>
+            <string>Frenzy</string>
+            <string>Invisibility</string>
+            <string>Lingering Damage Health</string>
+            <string>Lingering Damage Magicka</string>
+            <string>Lingering Damage Stamina</string>
+            <string>Paralysis</string>
+            <string>Ravage Health</string>
+            <string>Ravage Magicka</string>
+            <string>Ravage Stamina</string>
+            <string>Regenerate Health</string>
+            <string>Regenerate Magicka</string>
+            <string>Regenerate Stamina</string>
+            <string>Resist Fire</string>
+            <string>Resist Frost</string>
+            <string>Resist Magic</string>
+            <string>Resist Poison</string>
+            <string>Resist Shock</string>
+            <string>Restore Health</string>
+            <string>Restore Magicka</string>
+            <string>Restore Stamina</string>
+            <string>Slow</string>
+            <string>Waterbreathing</string>
+            <string>Weakness to Fire</string>
+            <string>Weakness to Frost</string>
+            <string>Weakness to Magic</string>
+            <string>Weakness to Poison</string>
+            <string>Weakness to Shock</string>
+        </array>
+        
+        <key>Abecean Longfin</key>
+        <array>
+            <string>Fortify Restoration</string>
+            <string>Fortify Sneak</string>
+            <string>Weakness to Frost</string>
+            <string>Weakness to Poison</string>
+            
+        </array>
+        
+        
+        <key>Ash Creep Cluster</key>
+        <array>
+            <string>Damage Stamina</string>
+            <string>Fortify Destruction</string>
+            <string>Invisibility</string>
+            <string>Resist Fire</string>
+            
+        </array>
+        
+        
+        <key>Ash Hopper Jelly</key>
+        <array>
+            <string>Fortify Light Armor</string>
+            <string>Resist Shock</string>
+            <string>Restore Health</string>
+            <string>Weakness to Frost</string>
+            
+        </array>
+        
+        
+        <key>Ashen Grass Pod</key>
+        <array>
+            <string>Fortify Lockpicking</string>
+            <string>Fortify Sneak</string>
+            <string>Resist Fire</string>
+            <string>Weakness to Shock</string>
+            
+        </array>
+        
+        
+        
+        <key>Bear Claws</key>
+        <array>
+            <string>Damage Magicka Regen</string>
+            <string>Fortify Health</string>
+            <string>Fortify One-Handed</string>
+            <string>Restore Stamina</string>
+            
+        </array>
+        
+        
+        
+        <key>Bee</key>
+        <array>
+            <string>Ravage Stamina</string>
+            <string>Regenerate Stamina</string>
+            <string>Restore Stamina</string>
+            <string>Weakness to Shock</string>
+            
+        </array>
+        
+        
+        
+        <key>Beehive Husk</key>
+        <array>
+            <string>Fortify Destruction</string>
+            <string>Fortify Light Armor</string>
+            <string>Fortify Sneak</string>
+            <string>Resist Poison</string>
+            
+        </array>
+        
+        
+        
+        <key>Berit's Ashes</key>
+        <array>
+            <string>Damage Stamina</string>
+            <string>Fortify Conjuration</string>
+            <string>Ravage Stamina</string>
+            <string>Resist Fire</string>
+            
+        </array>
+        
+        
+        
+        <key>Blisterwort</key>
+        <array>
+            <string>Damage Stamina</string>
+            <string>Fortify Smithing</string>
+            <string>Frenzy</string>
+            <string>Restore Health</string>
+            
+        </array>
+        
+        
+        
+        <key>Bleeding Crown</key>
+        <array>
+            <string>Fortify Block</string>
+            <string>Resist Magic</string>
+            <string>Weakness to Fire</string>
+            <string>Weakness to Poison</string>
+            
+        </array>
+        
+        
+        
+        <key>Blue Butterfly Wing</key>
+        <array>
+            <string>Damage Magicka Regen</string>
+            <string>Damage Stamina</string>
+            <string>Fortify Conjuration</string>
+            <string>Fortify Enchanting</string>
+            
+        </array>
+        
+        
+        
+        <key>Blue Dartwing</key>
+        <array>
+            <string>Fear</string>
+            <string>Fortify Pickpocket</string>
+            <string>Resist Shock</string>
+            <string>Restore Health</string>
+            
+        </array>
+        
+        
+        
+        <key>Blue Mountain Flower</key>
+        <array>
+            <string>Damage Magicka Regen</string>
+            <string>Fortify Conjuration</string>
+            <string>Fortify Health</string>
+            <string>Restore Health</string>
+            
+        </array>
+        
+        
+        <key>Boar Tusk</key>
+        <array>
+            <string>Fortify Block</string>
+            <string>Fortify Health</string>
+            <string>Fortify Stamina</string>
+            <string>Frenzy</string>
+            
+        </array>
+        
+        
+        
+        <key>Bone Meal</key>
+        <array>
+            <string>Damage Stamina</string>
+            <string>Fortify Conjuration</string>
+            <string>Ravage Stamina</string>
+            <string>Resist Fire</string>
+            
+        </array>
+        
+        
+        
+        <key>Briar Heart</key>
+        <array>
+            <string>Fortify Block</string>
+            <string>Fortify Magicka</string>
+            <string>Paralysis</string>
+            <string>Restore Magicka</string>
+            
+        </array>
+        
+        
+        <key>Burnt Spriggan Wood</key>
+        <array>
+            <string>Damage Magicka Regen</string>
+            <string>Fortify Alteration</string>
+            <string>Slow</string>
+            <string>Weakness to Fire</string>
+            
+        </array>
+        
+        
+        
+        <key>Butterfly Wing</key>
+        <array>
+            <string>Damage Magicka</string>
+            <string>Fortify Barter</string>
+            <string>Lingering Damage Stamina</string>
+            <string>Restore Health</string>
+            
+        </array>
+        
+        
+        
+        <key>Canis Root</key>
+        <array>
+            <string>Damage Stamina</string>
+            <string>Fortify Marksman</string>
+            <string>Fortify One-Handed</string>
+            <string>Paralysis</string>
+            
+        </array>
+        
+        
+        
+        <key>Charred Skeever Hide</key>
+        <array>
+            <string>Cure Disease</string>
+            <string>Resist Poison</string>
+            <string>Restore Health</string>
+            <string>Restore Stamina</string>
+            
+        </array>
+        
+        
+        
+        <key>Chaurus Eggs</key>
+        <array>
+            <string>Damage Magicka</string>
+            <string>Fortify Stamina</string>
+            <string>Invisibility</string>
+            <string>Weakness to Poison</string>
+            
+        </array>
+        
+        
+        
+        <key>Chaurus Hunter Antennae</key>
+        <array>
+            <string>Damage Stamina</string>
+            <string>Fortify Conjuration</string>
+            <string>Damage Magicka Regen</string>
+            <string>Fortify Enchanting</string>
+            
+        </array>
+        
+        
+        
+        <key>Chicken's Egg</key>
+        <array>
+            <string>Damage Magicka Regen</string>
+            <string>Lingering Damage Stamina</string>
+            <string>Resist Magic</string>
+            <string>Waterbreathing</string>
+            
+        </array>
+        
+        
+        
+        <key>Creep Cluster</key>
+        <array>
+            <string>Damage Stamina Regen</string>
+            <string>Fortify Carry Weight</string>
+            <string>Restore Magicka</string>
+            <string>Weakness to Magic</string>
+            
+        </array>
+        
+        
+        
+        <key>Crimson Nirnroot</key>
+        <array>
+            <string>Damage Health</string>
+            <string>Damage Stamina</string>
+            <string>Invisibility</string>
+            <string>Resist Magic</string>
+            
+        </array>
+        
+        
+        
+        <key>Cyrodilic Spadetail</key>
+        <array>
+            <string>Damage Stamina</string>
+            <string>Fear</string>
+            <string>Fortify Restoration</string>
+            <string>Ravage Health</string>
+            
+        </array>
+        
+        
+        
+        <key>Daedra Heart</key>
+        <array>
+            <string>Damage Magicka</string>
+            <string>Damage Stamina Regen</string>
+            <string>Fear</string>
+            <string>Restore Health</string>
+            
+        </array>
+        
+        
+        
+        <key>Deathbell</key>
+        <array>
+            <string>Damage Health</string>
+            <string>Ravage Stamina</string>
+            <string>Slow</string>
+            <string>Weakness to Poison</string>
+            
+        </array>
+        
+        
+        
+        <key>Dragon's Tongue</key>
+        <array>
+            <string>Fortify Barter</string>
+            <string>Fortify Illusion</string>
+            <string>Fortify Two-handed</string>
+            <string>Resist Fire</string>
+            
+        </array>
+        
+        
+        
+        <key>Dwarven Oil</key>
+        <array>
+            <string>Fortify Illusion</string>
+            <string>Regenerate Magicka</string>
+            <string>Restore Magicka</string>
+            <string>Weakness to Magic</string>
+            
+        </array>
+        
+        
+        
+        <key>Ectoplasm</key>
+        <array>
+            <string>Damage Health</string>
+            <string>Fortify Destruction</string>
+            <string>Fortify Magicka</string>
+            <string>Restore Magicka</string>
+            
+        </array>
+        
+        
+        
+        <key>Elves Ear</key>
+        <array>
+            <string>Fortify Marksman</string>
+            <string>Resist Fire</string>
+            <string>Restore Magicka</string>
+            <string>Weakness to Frost</string>
+            
+        </array>
+        
+        
+        <key>Emperor Parasol Moss</key>
+        <array>
+            <string>Damage Health</string>
+            <string>Fortify Magicka</string>
+            <string>Fortify Two-Handed</string>
+            <string>Regenerate Health</string>
+            
+        </array>
+        
+        
+        
+        <key>Eye of Sabre Cat</key>
+        <array>
+            <string>Damage Magicka</string>
+            <string>Ravage Health</string>
+            <string>Restore Health</string>
+            <string>Restore Stamina</string>
+            
+        </array>
+        
+        
+        
+        <key>Falmer Ear</key>
+        <array>
+            <string>Damage Health</string>
+            <string>Fortify Lockpicking</string>
+            <string>Frenzy</string>
+            <string>Resist Poison</string>
+            
+        </array>
+        
+        
+        <key>Felsaad Tern Feathers</key>
+        <array>
+            <string>Cure Disease</string>
+            <string>Fortify Light Armor</string>
+            <string>Restore Health</string>
+            <string>Resist Magic</string>
+            
+        </array>
+        
+        
+        
+        <key>Fire Salts</key>
+        <array>
+            <string>Regenerate Magicka</string>
+            <string>Resist Fire</string>
+            <string>Restore Magicka</string>
+            <string>Weakness to Frost</string>
+            
+        </array>
+        
+        
+        
+        <key>Fly Amanita</key>
+        <array>
+            <string>Fortify Two-handed</string>
+            <string>Frenzy</string>
+            <string>Regenerate Stamina</string>
+            <string>Resist Fire</string>
+            
+        </array>
+        
+        
+        
+        <key>Frost Mirriam</key>
+        <array>
+            <string>Damage Stamina Regen</string>
+            <string>Fortify Sneak</string>
+            <string>Ravage Magicka</string>
+            <string>Resist Frost</string>
+            
+        </array>
+        
+        
+        
+        <key>Frost Salts</key>
+        <array>
+            <string>Fortify Conjuration</string>
+            <string>Resist Frost</string>
+            <string>Restore Magicka</string>
+            <string>Weakness to Fire</string>
+            
+        </array>
+        
+        
+        
+        <key>Garlic</key>
+        <array>
+            <string>Fortify Stamina</string>
+            <string>Regenerate Health</string>
+            <string>Regenerate Magicka</string>
+            <string>Resist Poison</string>
+            
+        </array>
+        
+        
+        
+        <key>Giant Lichen</key>
+        <array>
+            <string>Ravage Health</string>
+            <string>Restore Magicka</string>
+            <string>Weakness to Poison</string>
+            <string>Weakness to Shock</string>
+            
+        </array>
+        
+        
+        
+        <key>Giant's Toe</key>
+        <array>
+            <string>Damage Stamina</string>
+            <string>Damage Stamina Regen</string>
+            <string>Fortify Carry Weight</string>
+            <string>Fortify Health</string>
+            
+        </array>
+        
+        
+        
+        <key>Gleamblossom</key>
+        <array>
+            <string>Regenerate Health</string>
+            <string>Resist Magic</string>
+            <string>Paralysis</string>
+            <string>Fear</string>
+            
+        </array>
+        
+        
+        
+        <key>Glow Dust</key>
+        <array>
+            <string>Damage Magicka</string>
+            <string>Damage Magicka Regen</string>
+            <string>Fortify Destruction</string>
+            <string>Resist Shock</string>
+            
+        </array>
+        
+        
+        
+        <key>Glowing Mushroom</key>
+        <array>
+            <string>Fortify Destruction</string>
+            <string>Fortify Health</string>
+            <string>Fortify Smithing</string>
+            <string>Resist Shock</string>
+            
+        </array>
+        
+        
+        
+        <key>Grass Pod</key>
+        <array>
+            <string>Fortify Alteration</string>
+            <string>Ravage Magicka</string>
+            <string>Resist Poison</string>
+            <string>Restore Magicka</string>
+            
+        </array>
+        
+        
+        
+        <key>Hagraven Claw</key>
+        <array>
+            <string>Fortify Barter</string>
+            <string>Fortify Enchanting</string>
+            <string>Lingering Damage Magicka</string>
+            <string>Resist Magic</string>
+            
+        </array>
+        
+        
+        
+        <key>Hagraven Feathers</key>
+        <array>
+            <string>Damage Magicka</string>
+            <string>Fortify Conjuration</string>
+            <string>Frenzy</string>
+            <string>Weakness to Shock</string>
+            
+        </array>
+        
+        
+        
+        <key>Hanging Moss</key>
+        <array>
+            <string>Damage Magicka</string>
+            <string>Damage Magicka Regen</string>
+            <string>Fortify Health</string>
+            <string>Fortify One-Handed</string>
+            
+        </array>
+        
+        
+        
+        <key>Hawk Beak</key>
+        <array>
+            <string>Fortify Carry Weight</string>
+            <string>Resist Frost</string>
+            <string>Resist Shock</string>
+            <string>Restore Stamina</string>
+            
+        </array>
+        
+        
+        
+        <key>Hawk Feathers</key>
+        <array>
+            <string>Cure Disease</string>
+            <string>Fortify Light Armor</string>
+            <string>Fortify One-Handed</string>
+            <string>Fortify Sneak</string>
+            
+        </array>
+        
+        
+        
+        <key>Histcarp</key>
+        <array>
+            <string>Damage Stamina Regen</string>
+            <string>Fortify Magicka</string>
+            <string>Restore Stamina</string>
+            <string>Waterbreathing</string>
+            
+        </array>
+        
+        
+        
+        <key>Honeycomb</key>
+        <array>
+            <string>Fortify Block</string>
+            <string>Fortify Light Armor</string>
+            <string>Ravage Stamina</string>
+            <string>Restore Stamina</string>
+            
+        </array>
+        
+        
+        
+        <key>Human Flesh</key>
+        <array>
+            <string>Damage Health</string>
+            <string>Fortify Sneak</string>
+            <string>Paralysis</string>
+            <string>Restore Magicka</string>
+            
+        </array>
+        
+        
+        
+        <key>Human Heart</key>
+        <array>
+            <string>Damage Health</string>
+            <string>Damage Magicka</string>
+            <string>Damage Magicka Regen</string>
+            <string>Frenzy</string>
+            
+        </array>
+        
+        
+        
+        <key>Ice Wraith Teeth</key>
+        <array>
+            <string>Fortify Heavy Armor</string>
+            <string>Invisibility</string>
+            <string>Weakness to Fire</string>
+            <string>Weakness to Frost</string>
+            
+        </array>
+        
+        
+        
+        <key>Imp Stool</key>
+        <array>
+            <string>Damage Health</string>
+            <string>Lingering Damage Health</string>
+            <string>Paralysis</string>
+            <string>Restore Health</string>
+            
+        </array>
+        
+        
+        
+        <key>Jarrin Root</key>
+        <array>
+            <string>Damage Health</string>
+            <string>Damage Magicka</string>
+            <string>Damage Magicka Regen</string>
+            <string>Damage Stamina</string>
+            
+        </array>
+        
+        
+        
+        <key>Jazbay Grapes</key>
+        <array>
+            <string>Fortify Magicka</string>
+            <string>Ravage Health</string>
+            <string>Regenerate Magicka</string>
+            <string>Weakness to Magic</string>
+            
+        </array>
+        
+        
+        
+        <key>Juniper Berries</key>
+        <array>
+            <string>Damage Stamina Regen</string>
+            <string>Fortify Marksman</string>
+            <string>Regenerate Health</string>
+            <string>Weakness to Fire</string>
+            
+        </array>
+        
+        
+        
+        <key>Large Antlers</key>
+        <array>
+            <string>Damage Stamina Regen</string>
+            <string>Fortify Stamina</string>
+            <string>Restore Stamina</string>
+            <string>Slow</string>
+            
+        </array>
+        
+        
+        
+        <key>Lavender</key>
+        <array>
+            <string>Fortify Conjuration</string>
+            <string>Fortify Stamina</string>
+            <string>Ravage Magicka</string>
+            <string>Resist Magic</string>
+            
+        </array>
+        
+        
+        
+        <key>Luna Moth Wing</key>
+        <array>
+            <string>Damage Magicka</string>
+            <string>Fortify Light Armor</string>
+            <string>Invisibility</string>
+            <string>Regenerate Health</string>
+            
+        </array>
+        
+        
+        
+        <key>Moon Sugar</key>
+        <array>
+            <string>Regenerate Magicka</string>
+            <string>Resist Frost</string>
+            <string>Restore Magicka</string>
+            <string>Weakness to Fire</string>
+            
+        </array>
+        
+        
+        
+        <key>Mora Tapinella</key>
+        <array>
+            <string>Fortify Illusion</string>
+            <string>Lingering Damage Health</string>
+            <string>Regenerate Stamina</string>
+            <string>Restore Magicka</string>
+            
+        </array>
+        
+        
+        
+        <key>Mudcrab Chitin</key>
+        <array>
+            <string>Cure Disease</string>
+            <string>Resist Fire</string>
+            <string>Resist Poison</string>
+            <string>Restore Stamina</string>
+            
+        </array>
+        
+        
+        
+        <key>Namira's Rot</key>
+        <array>
+            <string>Damage Magicka</string>
+            <string>Fear</string>
+            <string>Fortify Lockpicking</string>
+            <string>Regenerate Health</string>
+            
+        </array>
+        
+        
+        <key>Netch Jelly</key>
+        <array>
+            <string>Fear</string>
+            <string>Fortify Carry Weight</string>
+            <string>Paralysis</string>
+            <string>Restore Stamina</string>
+            
+        </array>
+        
+        
+        
+        <key>Nightshade</key>
+        <array>
+            <string>Damage Health</string>
+            <string>Damage Magicka Regen</string>
+            <string>Fortify Destruction</string>
+            <string>Lingering Damage Stamina</string>
+            
+        </array>
+        
+        
+        
+        <key>Nirnroot</key>
+        <array>
+            <string>Damage Health</string>
+            <string>Damage Stamina</string>
+            <string>Invisibility</string>
+            <string>Resist Magic</string>
+            
+        </array>
+        
+        
+        
+        <key>Nordic Barnacle</key>
+        <array>
+            <string>Damage Magicka</string>
+            <string>Fortify Pickpocket</string>
+            <string>Regenerate Health</string>
+            <string>Waterbreathing</string>
+            
+        </array>
+        
+        
+        
+        <key>Orange Dartwing</key>
+        <array>
+            <string>Fortify Pickpocket</string>
+            <string>Lingering Damage Health</string>
+            <string>Ravage Magicka</string>
+            <string>Restore Stamina</string>
+            
+        </array>
+        
+        
+        
+        <key>Pearl</key>
+        <array>
+            <string>Fortify Block</string>
+            <string>Resist Shock</string>
+            <string>Restore Magicka</string>
+            <string>Restore Stamina</string>
+            
+        </array>
+        
+        
+        
+        <key>Pine Thrush Egg</key>
+        <array>
+            <string>Fortify Lockpicking</string>
+            <string>Resist Shock</string>
+            <string>Restore Stamina</string>
+            <string>Weakness to Poison</string>
+            
+        </array>
+        
+        
+        
+        <key>Poison Bloom</key>
+        <array>
+            <string>Damage Health</string>
+            <string>Fear</string>
+            <string>Fortify Carry Weight</string>
+            <string>Slow</string>
+            
+        </array>
+        
+        
+        
+        <key>Powdered Mammoth Tusk</key>
+        <array>
+            <string>Fear</string>
+            <string>Fortify Sneak</string>
+            <string>Restore Stamina</string>
+            <string>Weakness to Fire</string>
+            
+        </array>
+        
+        
+        
+        <key>Purple Mountain Flower</key>
+        <array>
+            <string>Fortify Sneak</string>
+            <string>Lingering Damage Magicka</string>
+            <string>Resist Frost</string>
+            <string>Restore Stamina</string>
+            
+        </array>
+        
+        
+        
+        <key>Red Mountain Flower</key>
+        <array>
+            <string>Damage Health</string>
+            <string>Fortify Magicka</string>
+            <string>Ravage Magicka</string>
+            <string>Restore Magicka</string>
+            
+        </array>
+        
+        
+        
+        <key>River Betty</key>
+        <array>
+            <string>Damage Health</string>
+            <string>Fortify Alteration</string>
+            <string>Fortify Carry Weight</string>
+            <string>Slow</string>
+            
+        </array>
+        
+        
+        
+        <key>Rock Warbler Egg</key>
+        <array>
+            <string>Damage Stamina</string>
+            <string>Fortify One-Handed</string>
+            <string>Restore Health</string>
+            <string>Weakness to Magic</string>
+            
+        </array>
+        
+        
+        
+        <key>Sabre Cat Tooth</key>
+        <array>
+            <string>Fortify Heavy Armor</string>
+            <string>Fortify Smithing</string>
+            <string>Restore Stamina</string>
+            <string>Weakness to Poison</string>
+            
+        </array>
+        
+        
+        
+        <key>Salt Pile</key>
+        <array>
+            <string>Fortify Restoration</string>
+            <string>Regenerate Magicka</string>
+            <string>Slow</string>
+            <string>Weakness to Magic</string>
+            
+        </array>
+        
+        
+        
+        <key>Scaly Pholiata</key>
+        <array>
+            <string>Fortify Carry Weight</string>
+            <string>Fortify Illusion</string>
+            <string>Regenerate Stamina</string>
+            <string>Weakness to Magic</string>
+            
+        </array>
+        
+        
+        <key>Scathecraw</key>
+        <array>
+            <string>Lingering Damage Health</string>
+            <string>Ravage Health</string>
+            <string>Ravage Magicka</string>
+            <string>Ravage Stamina</string>
+            
+        </array>
+        
+        
+        
+        <key>Silverside Perch</key>
+        <array>
+            <string>Damage Stamina Regen</string>
+            <string>Ravage Health</string>
+            <string>Resist Frost</string>
+            <string>Restore Stamina</string>
+            
+        </array>
+        
+        
+        
+        <key>Skeever Tail</key>
+        <array>
+            <string>Damage Health</string>
+            <string>Damage Stamina Regen</string>
+            <string>Fortify Light Armor</string>
+            <string>Ravage Health</string>
+            
+        </array>
+        
+        
+        
+        <key>Slaughterfish Egg</key>
+        <array>
+            <string>Fortify Pickpocket</string>
+            <string>Fortify Stamina</string>
+            <string>Lingering Damage Health</string>
+            <string>Resist Poison</string>
+            
+        </array>
+        
+        
+        
+        <key>Slaughterfish Scales</key>
+        <array>
+            <string>Fortify Block</string>
+            <string>Fortify Heavy Armor</string>
+            <string>Lingering Damage Health</string>
+            <string>Resist Frost</string>
+            
+        </array>
+        
+        
+        
+        <key>Small Antlers</key>
+        <array>
+            <string>Damage Health</string>
+            <string>Fortify Restoration</string>
+            <string>Lingering Damage Stamina</string>
+            <string>Weakness to Poison</string>
+            
+        </array>
+        
+        
+        
+        <key>Small Pearl</key>
+        <array>
+            <string>Fortify One-Handed</string>
+            <string>Fortify Restoration</string>
+            <string>Resist Frost</string>
+            <string>Restore Stamina</string>
+            
+        </array>
+        
+        
+        
+        <key>Snowberries</key>
+        <array>
+            <string>Fortify Enchanting</string>
+            <string>Resist Fire</string>
+            <string>Resist Frost</string>
+            <string>Resist Shock</string>
+            
+        </array>
+        
+        
+        <key>Spawn Ash</key>
+        <array>
+            <string>Fortify Enchanting</string>
+            <string>Ravage Magicka</string>
+            <string>Ravage Stamina</string>
+            <string>Resist Fire</string>
+            
+        </array>
+        
+        
+        
+        <key>Spider Egg</key>
+        <array>
+            <string>Damage Magicka Regen</string>
+            <string>Damage Stamina</string>
+            <string>Fortify Lockpicking</string>
+            <string>Fortify Marksman</string>
+            
+        </array>
+        
+        
+        
+        <key>Spriggan Sap</key>
+        <array>
+            <string>Damage Magicka Regen</string>
+            <string>Fortify Alteration</string>
+            <string>Fortify Enchanting</string>
+            <string>Fortify Smithing</string>
+            
+        </array>
+        
+        
+        
+        <key>Swamp Fungal Pod</key>
+        <array>
+            <string>Lingering Damage Magicka</string>
+            <string>Paralysis</string>
+            <string>Resist Shock</string>
+            <string>Restore Health</string>
+            
+        </array>
+        
+        
+        
+        <key>Taproot</key>
+        <array>
+            <string>Fortify Illusion</string>
+            <string>Regenerate Magicka</string>
+            <string>Restore Magicka</string>
+            <string>Weakness to Magic</string>
+            
+        </array>
+        
+        
+        
+        <key>Thistle Branch</key>
+        <array>
+            <string>Fortify Heavy Armor</string>
+            <string>Ravage Stamina</string>
+            <string>Resist Frost</string>
+            <string>Resist Poison</string>
+            
+        </array>
+        
+        
+        
+        <key>Torchbug Thorax</key>
+        <array>
+            <string>Fortify Stamina</string>
+            <string>Lingering Damage Magicka</string>
+            <string>Restore Stamina</string>
+            <string>Weakness to Magic</string>
+            
+        </array>
+        
+        
+        
+        <key>Trama Root</key>
+        <array>
+            <string>Damage Magicka</string>
+            <string>Fortify Carry Weight</string>
+            <string>Slow</string>
+            <string>Weakness to Shock</string>
+            
+        </array>
+        
+        
+        
+        <key>Troll Fat</key>
+        <array>
+            <string>Damage Health</string>
+            <string>Fortify Two-handed</string>
+            <string>Frenzy</string>
+            <string>Resist Poison</string>
+            
+        </array>
+        
+        
+        
+        <key>Tundra Cotton</key>
+        <array>
+            <string>Fortify Barter</string>
+            <string>Fortify Block</string>
+            <string>Fortify Magicka</string>
+            <string>Resist Magic</string>
+            
+        </array>
+        
+        
+        
+        <key>Vampire Dust</key>
+        <array>
+            <string>Cure Disease</string>
+            <string>Invisibility</string>
+            <string>Regenerate Health</string>
+            <string>Restore Magicka</string>
+            
+        </array>
+        
+        
+        
+        <key>Void Salts</key>
+        <array>
+            <string>Damage Health</string>
+            <string>Fortify Magicka</string>
+            <string>Resist Magic</string>
+            <string>Weakness to Shock</string>
+            
+        </array>
+        
+        
+        
+        <key>Wheat</key>
+        <array>
+            <string>Damage Stamina Regen</string>
+            <string>Fortify Health</string>
+            <string>Lingering Damage Magicka</string>
+            <string>Restore Health</string>
+            
+        </array>
+        
+        
+        
+        <key>White Cap</key>
+        <array>
+            <string>Fortify Heavy Armor</string>
+            <string>Ravage Magicka</string>
+            <string>Restore Magicka</string>
+            <string>Weakness to Frost</string>
+            
+        </array>
+        
+        
+        
+        <key>Wisp Wrappings</key>
+        <array>
+            <string>Fortify Carry Weight</string>
+            <string>Fortify Destruction</string>
+            <string>Resist Magic</string>
+            <string>Restore Stamina</string>
+            
+        </array>
+        
+        
+        
+        <key>Yellow Mountain Flower</key>
+        <array>
+            <string>Damage Stamina Regen</string>
+            <string>Fortify Health</string>
+            <string>Fortify Restoration</string>
+            <string>Resist Poison</string>
+            
+        </array>
+        
+    </dict>
+</plist>

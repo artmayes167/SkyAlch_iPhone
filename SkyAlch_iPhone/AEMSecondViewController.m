@@ -8,6 +8,10 @@
 
 #import "AEMSecondViewController.h" // Potions
 
+@interface AEMSecondViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@end
+
 @implementation AEMSecondViewController
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{return 1;}
@@ -17,15 +21,18 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-        static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"Cell";
         
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        if (cell == nil) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        }
-        
-        [[cell textLabel] setText:[[MainDictionary sharedDictionary] getPotion: indexPath.row]];
-        return cell;
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    [cell textLabel].lineBreakMode = NSLineBreakByWordWrapping;
+    [cell textLabel].numberOfLines = 0;
+    [cell textLabel].font = [UIFont fontWithName:@"Helvetica Bold" size:16.0];
+    [[cell textLabel] setText:[[MainDictionary sharedDictionary] getPotion: indexPath.row]];
+    return cell;
     
 }
 
@@ -33,22 +40,21 @@
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
         IngredientsForPotion *newView = [[IngredientsForPotion alloc] init];
     newView.delegate = self;
-        newView.ingredientsArray = [[MainDictionary sharedDictionary] getIngredientsForPotion:[[MainDictionary sharedDictionary] getPotion: indexPath.row]];
-        newView.currentPotionString = [[MainDictionary sharedDictionary] getPotion: indexPath.row];
+    newView.ingredientsArray = [[MainDictionary sharedDictionary] getIngredientsForPotion:[[MainDictionary sharedDictionary] getPotion: indexPath.row]];
+    newView.currentPotionString = [[MainDictionary sharedDictionary] getPotion: indexPath.row];
+    newView.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     if ([self respondsToSelector:@selector(presentViewController:animated:completion:)]) {
         [self presentViewController:newView animated:YES completion:NULL];
     } else {
         [self presentModalViewController:newView animated:YES];
     }
-        newView = nil;
-    
 }
 
 //The following two methods add the search string down the side of the table
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
     NSMutableArray *charactersForSort = [[NSMutableArray alloc] init];
-    NSArray *ings = [[MainDictionary sharedDictionary] getPotions];
-    for (NSString *item in ings)
+    NSArray *allPotions = [[MainDictionary sharedDictionary] getPotions];
+    for (NSString *item in allPotions)
     {
         if (![charactersForSort containsObject:[item substringToIndex:1]]) [charactersForSort addObject:[item substringToIndex:1]];
     }
@@ -57,19 +63,20 @@
 
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
     BOOL found = NO;
-    NSInteger b = 0;
-    NSArray *ings = [[MainDictionary sharedDictionary] getPotions];
-    for (NSString *item in ings)
+    NSUInteger rowToScrollTo = 0;
+    NSArray *allPotions = [[MainDictionary sharedDictionary] getPotions];
+    for (NSString *item in allPotions)
     {
         if ([[item substringToIndex:1] isEqualToString:title])
             if (!found)
             {
-                [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:b inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
+                [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:rowToScrollTo inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
                 found = YES;
+                return rowToScrollTo;
             }
-        b++;
+        rowToScrollTo++;
     }
-    return b;
+    return rowToScrollTo;
 }
 
 -(void)ingredientsForPotionShouldBeDismissed:(IngredientsForPotion *)controller
@@ -79,10 +86,5 @@
     } else {
         [self dismissModalViewControllerAnimated:YES];
     }
-}
-
-- (void)viewDidUnload {
-    [self setTableView:nil];
-    [super viewDidUnload];
 }
 @end
