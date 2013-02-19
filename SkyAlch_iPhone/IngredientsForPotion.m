@@ -49,4 +49,11 @@
 - (IBAction)back:(id)sender {
     [self.delegate ingredientsForPotionShouldBeDismissed:self];
 }
+
+- (void)dealloc
+{
+#ifdef DEBUG
+	NSLog(@"dealloc %@", self);
+#endif
+}
 @end

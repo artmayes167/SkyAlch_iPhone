@@ -51,8 +51,8 @@
 //The following two methods add the search string down the side of the table
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
     NSMutableArray *charactersForSort = [[NSMutableArray alloc] init];
-    NSArray *allPotions = [[MainDictionary sharedDictionary] getPotions];
-    for (NSString *item in allPotions)
+
+    for (NSString *item in [[MainDictionary sharedDictionary] getPotions])
     {
         if (![charactersForSort containsObject:[item substringToIndex:1]]) [charactersForSort addObject:[item substringToIndex:1]];
     }
@@ -60,18 +60,15 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
-    BOOL found = NO;
     NSUInteger rowToScrollTo = 0;
-    NSArray *allPotions = [[MainDictionary sharedDictionary] getPotions];
-    for (NSString *item in allPotions)
+    for (NSString *item in [[MainDictionary sharedDictionary] getPotions])
     {
-        if ([[item substringToIndex:1] isEqualToString:title])
-            if (!found)
-            {
-                [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:rowToScrollTo inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
-                found = YES;
-                return rowToScrollTo;
-            }
+        if ([[item substringToIndex:1] isEqualToString:title]){
+           
+            [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:rowToScrollTo inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
+            return rowToScrollTo;
+            
+        }
         rowToScrollTo++;
     }
     return rowToScrollTo;

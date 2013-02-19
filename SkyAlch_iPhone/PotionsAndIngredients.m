@@ -7,6 +7,7 @@
 //
 
 #import "PotionsAndIngredients.h"
+#import "MainDictionary.h"
 
 @interface PotionsAndIngredients ()
 @property (weak, nonatomic) IBOutlet UITextView *ingredientsTV;
@@ -79,5 +80,12 @@
 
 - (IBAction)back:(id)sender {
     [self.delegate potionsAndIngredientsControllerShouldBeDismissed:self];
+}
+
+- (void)dealloc
+{
+#ifdef DEBUG
+	NSLog(@"dealloc %@", self);
+#endif
 }
 @end
