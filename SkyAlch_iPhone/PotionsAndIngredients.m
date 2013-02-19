@@ -49,7 +49,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{   
+{
+    [self.ingredientsTV setText:@""]; // forces textView to scroll back to top
     NSArray *ingredients = [[MainDictionary sharedDictionary] getIngredientsForPotion:[self.potionsArray objectAtIndex: indexPath.row]];
     [self.ingredientsTV setText:[ingredients componentsJoinedByString:@"\n"]];
 }
