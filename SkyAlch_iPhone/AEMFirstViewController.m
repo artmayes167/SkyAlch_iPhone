@@ -44,7 +44,8 @@
     
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
     
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     PotionsAndIngredients *newView = [[PotionsAndIngredients alloc] init];
@@ -57,7 +58,8 @@
     
 }
 
-- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
+{
     NSMutableArray *charactersForSort = [[NSMutableArray alloc] init];
     for (NSString *item in [[MainDictionary sharedDictionary] getIngredients])
     {
@@ -66,7 +68,8 @@
     return charactersForSort;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
+{
     NSUInteger rowToScrollTo = 0;
     for (NSString *item in [[MainDictionary sharedDictionary] getIngredients])
     {
