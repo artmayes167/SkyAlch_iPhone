@@ -12,20 +12,16 @@
 @interface PotionsAndIngredients ()
 @property (weak, nonatomic) IBOutlet UITextView *ingredientsTV;
 @property (weak, nonatomic) IBOutlet UITableView *potionsTable;
-@property (weak, nonatomic) IBOutlet UILabel *currentIngredient;
-- (IBAction)back:(id)sender;
 @end
 
 @implementation PotionsAndIngredients
 @synthesize ingredientsTV = _ingredientsTV;
 @synthesize potionsTable = _potionsTable;
-@synthesize currentIngredient = _currentIngredient;
 @synthesize potionsArray = _potionsArray;
 @synthesize currentIngredientString = _currentIngredientString;
 
 -(void)setPotionsArray:(NSArray *)potionsArray{
     if (!_potionsArray) _potionsArray = [NSArray new];
-    
     _potionsArray = potionsArray;
 }
 
@@ -62,7 +58,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
-    self.currentIngredient.text = self.currentIngredientString;
+    self.navigationItem.title = self.currentIngredientString;
         
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.potionsTable selectRowAtIndexPath:indexPath animated:NO scrollPosition: UITableViewScrollPositionNone];
@@ -72,20 +68,15 @@
 -(void)viewWillDisappear:(BOOL)animated{
     [self setIngredientsTV:nil];
     [self setPotionsTable:nil];
-    [self setCurrentIngredient:nil];
     [self setPotionsArray:nil];
     [self setCurrentIngredientString:nil];
     [super viewWillDisappear:YES];
 }
 
-- (IBAction)back:(id)sender {
-    [self.delegate potionsAndIngredientsControllerShouldBeDismissed:self];
-}
-
 - (void)dealloc
 {
 #ifdef DEBUG
-	NSLog(@"dealloc %@", self);
+	//NSLog(@"dealloc %@", self);
 #endif
 }
 @end

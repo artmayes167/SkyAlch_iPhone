@@ -10,17 +10,10 @@
 
 @class IngredientsForPotion;
 
-@protocol IngredientsForPotionDelegate <NSObject>
-
-- (void)ingredientsForPotionShouldBeDismissed:(IngredientsForPotion *)controller;
-
-@end
 
 @interface IngredientsForPotion : UIViewController
 
 @property (strong, nonatomic) NSString *currentPotionString;
 @property (strong, nonatomic) NSArray *ingredientsArray;
-
-@property (nonatomic, weak) id<IngredientsForPotionDelegate> delegate;
 
 @end

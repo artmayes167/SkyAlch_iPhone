@@ -9,13 +9,10 @@
 #import "IngredientsForPotion.h"
 
 @interface IngredientsForPotion ()
-@property (weak, nonatomic) IBOutlet UILabel *potionsLabel;
 @property (weak, nonatomic) IBOutlet UITextView *ingredientsTV;
-- (IBAction)back:(id)sender;
 @end
 
 @implementation IngredientsForPotion
-@synthesize potionsLabel = _potionsLabel;
 @synthesize ingredientsTV = _ingredientsTV;
 @synthesize ingredientsArray = _ingredientsArray;
 @synthesize currentPotionString = _currentPotionString;
@@ -32,28 +29,21 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+    self.navigationItem.title = self.currentPotionString;
     [self.ingredientsTV setText:[self.ingredientsArray componentsJoinedByString:@"\n"]];
-    [self.potionsLabel setText:self.currentPotionString];
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    
-    [self setPotionsLabel:nil];
     [self setIngredientsTV:nil];
     [self setIngredientsArray:nil];
     [self setCurrentPotionString:nil];
 }
 
-- (IBAction)back:(id)sender {
-    [self.delegate ingredientsForPotionShouldBeDismissed:self];
-}
-
 - (void)dealloc
 {
 #ifdef DEBUG
-	NSLog(@"dealloc %@", self);
+	//NSLog(@"dealloc %@", self);
 #endif
 }
 @end

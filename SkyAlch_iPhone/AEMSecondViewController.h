@@ -10,5 +10,5 @@
 #import "IngredientsForPotion.h"
 #import "MainDictionary.h"
 
-@interface AEMSecondViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, IngredientsForPotionDelegate>
+@interface AEMSecondViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 @end

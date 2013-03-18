@@ -16,6 +16,11 @@
 -(NSString *)getIngredient:(int)num;
 -(NSArray *)getPotions;
 -(int)getPotionsCount;
+-(int)getPotionsWithoutPoisonsCount;
+-(NSArray *)getPotionsWithoutPoisons;
+-(NSMutableArray *)getPoisonsWithoutPotions;
+-(int)getPoisonsWithoutPotionsCount;
+-(NSMutableArray *)getPotionsWithoutPoisonsOrMagicka;
 -(NSString *)getPotion:(int)i;
 -(int)getIngredientsCount;
 -(NSMutableArray *)getCompatibleIngredientsForIngredient:(NSString *)ing;

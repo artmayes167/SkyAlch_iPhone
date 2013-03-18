@@ -10,5 +10,5 @@
 #import "MainDictionary.h"
 #import "PotionsAndIngredients.h"
 
-@interface AEMFirstViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, PotionsAndIngredientsDelegate>
+@interface AEMFirstViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 @end
