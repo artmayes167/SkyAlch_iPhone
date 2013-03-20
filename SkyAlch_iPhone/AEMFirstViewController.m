@@ -20,21 +20,6 @@
     
     CGFloat screenScale = [[UIScreen mainScreen] scale];
     if (screenScale == 2.0f) self.tabBarItem.image = [UIImage imageNamed:@"Bowl.png"];
-    self.parentViewController.navigationItem.title = @"Ingredients";
-}
-
--(void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
--(void)viewDidDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:animated];
-    //self.parentViewController.navigationItem.title = @"Ings";
-}
--(void)viewWillDisappear:(BOOL)animated
-{
-    //self.parentViewController.navigationItem.title = @"Ings";
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{return 1;}
@@ -47,9 +32,7 @@
     static NSString *CellIdentifier = @"Cell";
         
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
+    if (cell == nil) cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     
     [cell textLabel].lineBreakMode = NSLineBreakByWordWrapping;
     [cell textLabel].numberOfLines = 0;
@@ -64,15 +47,10 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     PotionsAndIngredients *newView = [[PotionsAndIngredients alloc] init];
-    //newView.delegate = self;
     newView.potionsArray = [[MainDictionary sharedDictionary] getArrayForKey:[[MainDictionary sharedDictionary] getIngredient: indexPath.row]];
     newView.currentIngredientString = [[MainDictionary sharedDictionary] getIngredient: indexPath.row];
-    //newView.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     
     [self.navigationController pushViewController:newView animated:YES];
-    self.parentViewController.navigationItem.title = @"Ings";
-    //[self presentViewController:newView animated:YES completion:NULL];
-    
 }
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView

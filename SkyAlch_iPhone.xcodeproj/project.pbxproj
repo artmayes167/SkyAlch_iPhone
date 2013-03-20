@@ -145,8 +145,7 @@
 				C1458EEF15360DA10017BDF4 /* IngredientsForPotion.h */,
 				C1458EF015360DA10017BDF4 /* IngredientsForPotion.m */,
 				C1458EF115360DA20017BDF4 /* IngredientsForPotion.xib */,
-				C1458EEC15360A8A0017BDF4 /* MainDictionary.h */,
-				C1458EED15360A8A0017BDF4 /* MainDictionary.m */,
+				C1E9AC6616F8DC2200C7896B /* Data Access */,
 				C1458ECD153607FE0017BDF4 /* MainStoryboard.storyboard */,
 				C1458EE7153608D80017BDF4 /* PotionsAndIngredients.h */,
 				C1458EE8153608D80017BDF4 /* PotionsAndIngredients.m */,
@@ -180,6 +179,15 @@
 				C1C6EBAD16D2602500D9324C /* items.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C1E9AC6616F8DC2200C7896B /* Data Access */ = {
+			isa = PBXGroup;
+			children = (
+				C1458EEC15360A8A0017BDF4 /* MainDictionary.h */,
+				C1458EED15360A8A0017BDF4 /* MainDictionary.m */,
+			);
+			name = "Data Access";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

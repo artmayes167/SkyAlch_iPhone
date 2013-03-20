@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hnt-g3-Hq2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Preferences View Controller - Preferences-->
+        <!--Preferences View Controller - Filter Potions-->
         <scene sceneID="YgG-kG-1wa">
             <objects>
                 <tableViewController id="KRs-Bu-jn7" customClass="AMPreferencesViewController" sceneMemberID="viewController">
@@ -69,7 +69,7 @@
                                 </constraints>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MagickaCell" id="f9L-N5-eVY">
-                                <rect key="frame" x="0.0" y="135" width="320" height="45"/>
+                                <rect key="frame" x="0.0" y="135" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -95,17 +95,116 @@
                                     <constraint firstItem="hXK-nH-ZuJ" firstAttribute="leading" secondItem="f9L-N5-eVY" secondAttribute="leading" constant="30" id="oQU-N2-rck"/>
                                 </constraints>
                             </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="MeleeCell" id="5wk-Jq-Y7l">
+                                <rect key="frame" x="0.0" y="179" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vsE-pZ-6lJ">
+                                            <connections>
+                                                <action selector="melee:" destination="KRs-Bu-jn7" eventType="valueChanged" id="wwt-iF-W4A"/>
+                                            </connections>
+                                        </switch>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Melee" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTa-BC-KfG">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vsE-pZ-6lJ" secondAttribute="trailing" constant="30" id="0dz-sU-kP8"/>
+                                    <constraint firstItem="ZTa-BC-KfG" firstAttribute="centerY" secondItem="vsE-pZ-6lJ" secondAttribute="centerY" type="default" id="2IW-03-XcW"/>
+                                    <constraint firstItem="ZTa-BC-KfG" firstAttribute="leading" secondItem="5wk-Jq-Y7l" secondAttribute="leading" constant="30" id="4TJ-E3-0Hy"/>
+                                    <constraint firstItem="vsE-pZ-6lJ" firstAttribute="top" secondItem="5wk-Jq-Y7l" secondAttribute="top" constant="8" id="ZGB-ph-QwY"/>
+                                </constraints>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="StealthCell" id="g4E-MH-QaD">
+                                <rect key="frame" x="0.0" y="223" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d7q-d1-6xD">
+                                            <connections>
+                                                <action selector="stealth:" destination="KRs-Bu-jn7" eventType="valueChanged" id="pQ9-2i-qCH"/>
+                                            </connections>
+                                        </switch>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Stealth" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9s-ze-a6s">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="A9s-ze-a6s" firstAttribute="centerY" secondItem="d7q-d1-6xD" secondAttribute="centerY" type="default" id="RZk-bO-ijM"/>
+                                    <constraint firstItem="A9s-ze-a6s" firstAttribute="leading" secondItem="g4E-MH-QaD" secondAttribute="leading" constant="30" id="ZP7-B2-53D"/>
+                                    <constraint firstAttribute="trailing" secondItem="d7q-d1-6xD" secondAttribute="trailing" constant="30" id="hBV-jB-0ud"/>
+                                    <constraint firstItem="d7q-d1-6xD" firstAttribute="top" secondItem="g4E-MH-QaD" secondAttribute="top" constant="8" id="uFv-vD-1g8"/>
+                                </constraints>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="MiscellanyCell" id="l5X-9c-fvu">
+                                <rect key="frame" x="0.0" y="267" width="320" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DVA-hz-agG">
+                                            <connections>
+                                                <action selector="miscellany:" destination="KRs-Bu-jn7" eventType="valueChanged" id="Ci3-Mn-ib6"/>
+                                            </connections>
+                                        </switch>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Miscellany" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yyp-3E-dM3">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="Yyp-3E-dM3" firstAttribute="leading" secondItem="l5X-9c-fvu" secondAttribute="leading" constant="30" id="2Oa-Qy-hTb"/>
+                                    <constraint firstAttribute="trailing" secondItem="DVA-hz-agG" secondAttribute="trailing" constant="30" id="Gyy-Jz-5Iz"/>
+                                    <constraint firstItem="DVA-hz-agG" firstAttribute="top" secondItem="l5X-9c-fvu" secondAttribute="top" constant="8" id="jnN-XZ-iFU"/>
+                                    <constraint firstItem="Yyp-3E-dM3" firstAttribute="centerY" secondItem="DVA-hz-agG" secondAttribute="centerY" type="default" id="mGO-aL-3m3"/>
+                                </constraints>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="KRs-Bu-jn7" id="sV1-z8-afB"/>
                             <outlet property="delegate" destination="KRs-Bu-jn7" id="f2l-bH-fsN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Preferences" id="vR0-e1-QTS"/>
+                    <navigationItem key="navigationItem" title="Filter Potions" id="vR0-e1-QTS"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xID-Rj-5rB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="256" y="-401"/>
+            <point key="canvasLocation" x="1008" y="528"/>
+        </scene>
+        <!--Navigation Controller - Item-->
+        <scene sceneID="VAP-Jq-kiT">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Pai-4u-b4a" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="GvC-ut-KdY"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="MwS-KQ-RbM">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="OBb-oV-IR4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v8F-W2-Ja0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="581" y="-128"/>
         </scene>
         <!--First View Controller - Ingredients-->
         <scene sceneID="11">
@@ -151,7 +250,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ingredients" image="Bowlx30.png" id="7"/>
-                    <navigationItem key="navigationItem" title="Ingredients" id="diD-DV-7Ge"/>
+                    <navigationItem key="navigationItem" title="Ingredients" id="MRH-69-638"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="NiC-uo-dwN" id="tDE-S5-3ig"/>
@@ -159,7 +258,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="-138"/>
+            <point key="canvasLocation" x="938" y="-133"/>
+        </scene>
+        <!--Navigation Controller - Potions-->
+        <scene sceneID="Fua-uJ-6xY">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="D4J-ZO-7Xl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Potions" image="Potionx30.png" id="ahR-za-Mfc"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="4Lm-T4-bKF">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3" kind="relationship" relationship="rootViewController" id="Wfe-ng-Vzj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wm3-n4-9Ph" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="310" y="741"/>
         </scene>
         <!--Second View Controller - Potions-->
         <scene sceneID="13">
@@ -205,7 +322,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Potions" image="Potionx30.png" id="6"/>
-                    <navigationItem key="navigationItem" title="Potions" id="2m4-bd-E2u"/>
+                    <navigationItem key="navigationItem" title="Potions" id="2m4-bd-E2u">
+                        <barButtonItem key="rightBarButtonItem" title="Filter" id="5pc-cg-bVV">
+                            <connections>
+                                <segue destination="KRs-Bu-jn7" kind="push" id="AjD-Lx-hfa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="OtR-4E-z8r" id="qFn-go-vxC"/>
@@ -215,34 +338,12 @@
             </objects>
             <point key="canvasLocation" x="653" y="498"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Gew-sa-Wm7">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="hnt-g3-Hq2" sceneMemberID="viewController">
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="W2j-cp-3ok">
-                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="4" kind="relationship" relationship="rootViewController" id="1U3-Og-xdz"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Rn-X8-0UF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-316" y="180"/>
-        </scene>
         <!--Initial Tab Bar View Controller-->
         <scene sceneID="15">
             <objects>
                 <tabBarController id="4" customClass="InitialTabBarViewController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="CMW-jt-9bX">
-                        <barButtonItem key="rightBarButtonItem" title="Prefs" id="wqi-Ro-zag">
-                            <connections>
-                                <segue destination="KRs-Bu-jn7" kind="push" id="6W7-O2-ilI"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Filter" id="wqi-Ro-zag"/>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="5">
@@ -251,8 +352,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="2" kind="relationship" relationship="viewControllers" id="26"/>
-                        <segue destination="3" kind="relationship" relationship="viewControllers" id="27"/>
+                        <segue destination="D4J-ZO-7Xl" kind="relationship" relationship="viewControllers" id="LTZ-nz-6Ws"/>
+                        <segue destination="Pai-4u-b4a" kind="relationship" relationship="viewControllers" id="71c-O3-MQb"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
@@ -265,34 +366,6 @@
         <image name="Potionx30.png" width="18" height="31"/>
         <image name="roundEdgeBox.jpg" width="225" height="225"/>
     </resources>
-    <classes>
-        <class className="AEMFirstViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AEMFirstViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="AEMSecondViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AEMSecondViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="AMPreferencesViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AMPreferencesViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="crafting:" candidateClass="UISwitch"/>
-                <relationship kind="action" name="poisons:" candidateClass="UISwitch"/>
-                <relationship kind="action" name="potions:" candidateClass="UISwitch"/>
-            </relationships>
-        </class>
-        <class className="InitialTabBarViewController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InitialTabBarViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -15,51 +15,64 @@ static MainDictionary *sharedDictionary;
 @property (nonatomic, strong) NSDictionary *dictionary;
 @property (nonatomic, strong) NSArray *ingredients;
 @property (nonatomic, strong) NSArray *potions;
-@property (nonatomic, strong) NSMutableArray *potionsWithoutPoisons;
-@property (nonatomic, strong) NSMutableArray *poisonsWithoutPotions;
-@property (nonatomic, strong) NSMutableArray *potionsWithoutPoisonsOrMagicka;
 @end
 
 @implementation MainDictionary
 
--(NSMutableArray *)potionsWithoutPoisons
-{
-    if (!_potionsWithoutPoisons) _potionsWithoutPoisons = [NSMutableArray new];
-    return _potionsWithoutPoisons;
-}
--(NSMutableArray *)poisonsWithoutPotions
-{
-    if (!_poisonsWithoutPotions) _poisonsWithoutPotions = [NSMutableArray new];
-    return _poisonsWithoutPotions;
-}
--(NSMutableArray *)potionsWithoutPoisonsOrMagicka
-{
-    if (!_potionsWithoutPoisonsOrMagicka) _potionsWithoutPoisonsOrMagicka = [NSMutableArray new];
-    return _potionsWithoutPoisonsOrMagicka;
-}
+
 
 -(BOOL)isPoison:(NSString *)candidate
 {
     NSString *string = [candidate substringToIndex:4];
     BOOL poison = NO;
-    if ([string isEqualToString:@"Pois"] || [string isEqualToString:@"Dama"] || [string isEqualToString:@"Fear"] || [string isEqualToString:@"Fren"] || [string isEqualToString:@"Ling"] || [string isEqualToString:@"Para"] || [string isEqualToString:@"Rava"] || [string isEqualToString:@"Slow"] || [string isEqualToString:@"Weak"]) poison = YES;
+    if ([string isEqualToString:@"Dama"] || [string isEqualToString:@"Fear"] || [string isEqualToString:@"Fren"] || [string isEqualToString:@"Ling"] || [string isEqualToString:@"Para"] || [string isEqualToString:@"Rava"] || [string isEqualToString:@"Slow"] || [string isEqualToString:@"Weak"]) poison = YES;
     return poison;
 }
--(void)checkForPotionsWithoutPoisonsOrMagicka:string
+
+
+-(BOOL)isMagicka:(NSString *)string
 {
-    // Rethink this
-    BOOL isExcluded = NO;
+    if ([string isEqualToString:@"Fortify Magicka"] || [string isEqualToString:@"Regenerate Magicka"] || [string isEqualToString:@"Restore Magicka"] || [string isEqualToString:@"Weakness to Fire"] || [string isEqualToString:@"Weakness to Frost"] || [string isEqualToString:@"Weakness to Magic"] || [string isEqualToString:@"Weakness to Shock"]) {
+        return YES;
+    }
     NSArray *array = [string componentsSeparatedByString:@" "];
     for (NSString *newString in array) {
-        NSLog(@"%@", newString);
-        if ([newString isEqualToString:@"Magicka"]) {
-            isExcluded = YES;
+        if ([newString isEqualToString:@"Alteration"] || [newString isEqualToString:@"Conjuration"] || [newString isEqualToString:@"Destruction"] || [newString isEqualToString:@"Illusion"] || [newString isEqualToString:@"Restoration"]) {
+            return YES;
         }
     }
-    if (!isExcluded) {
-        [self.potionsWithoutPoisonsOrMagicka addObject:string];
-        NSLog(@"%@", string);
+    return NO;
+}
+
+-(BOOL)isMelee:(NSString *)string
+{
+    NSArray *array = [string componentsSeparatedByString:@" "];
+    for (NSString *newString in array) {
+        if ([newString isEqualToString:@"Armor"] || [newString isEqualToString:@"Marksman"] || [newString isEqualToString:@"One-Handed"] || [newString isEqualToString:@"Two-handed"] || [newString isEqualToString:@"Block"]) {
+            return YES;
+        }
     }
+    return NO;
+}
+-(BOOL)isStealth:(NSString *)string
+{
+    NSArray *array = [string componentsSeparatedByString:@" "];
+    for (NSString *newString in array) {
+        if ([newString isEqualToString:@"Pickpocket"] || [newString isEqualToString:@"Sneak"] || [newString isEqualToString:@"Lockpicking"]) {
+            return YES;
+        }
+    }
+    return NO;
+}
+-(BOOL)isMiscellany:(NSString *)string
+{
+    NSArray *array = [string componentsSeparatedByString:@" "];
+    for (NSString *newString in array) {
+        if ([newString isEqualToString:@"Cure"] || [newString isEqualToString:@"Barter"] || [newString isEqualToString:@"Carry"] || [newString isEqualToString:@"Smithing"] || [newString isEqualToString:@"Invisibility"] || [newString isEqualToString:@"Paralysis"] || [newString isEqualToString:@"Slow"] || [newString isEqualToString:@"Waterbreathing"] || [newString isEqualToString:@"Fear"] || [newString isEqualToString:@"Frenzy"]) {
+            return YES;
+        }
+    }
+    return NO;
 }
 
 -(id)init{
@@ -80,22 +93,15 @@ static MainDictionary *sharedDictionary;
         self.dictionary = [[NSDictionary alloc] initWithContentsOfFile: self.path];
         self.ingredients = [self.dictionary objectForKey:@"Ingredients"];
         self.potions = [self.dictionary objectForKey:@"Potions"];
-        
-        for (NSString *string in self.potions) {
-            if (![self isPoison:string]) {
-                [self.potionsWithoutPoisons addObject:string];
-                [self checkForPotionsWithoutPoisonsOrMagicka:string];
-            }
-            else {
-                [self.poisonsWithoutPotions addObject:string];
-            }
-        }
     }
     return self;
 }
 
 +(MainDictionary *)sharedDictionary{
-    if (!sharedDictionary) sharedDictionary = [[MainDictionary alloc] init];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedDictionary = [[MainDictionary alloc] init];
+    });
 	return sharedDictionary;
 }
 
@@ -113,31 +119,52 @@ static MainDictionary *sharedDictionary;
 -(int)getIngredientsCount{
     return self.ingredients.count;
 }
+#define POISONS_DEFAULT_KEY @"poisons"
+#define POTIONS_DEFAULT_KEY @"potions"
+#define MAGICKA_DEFAULT_KEY @"magicka"
+#define MELEE_DEFAULT_KEY @"melee"
+#define STEALTH_DEFAULT_KEY @"stealth"
+#define MISCELLANY_DEFAULT_KEY @"miscellany"
+
 -(NSArray *)getPotions{
-    return self.potions;
+    // implement logic here
+     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+     NSMutableArray *currentPotions = [NSMutableArray arrayWithArray:self.potions];
+    for (NSString *string in self.potions) {
+        if (![defaults boolForKey:POISONS_DEFAULT_KEY]) {
+            if ([self isPoison:string]) {
+                [currentPotions removeObject:string];
+            }
+        } else if (![defaults boolForKey:POTIONS_DEFAULT_KEY]) {
+            if (![self isPoison:string]) {
+                [currentPotions removeObject:string];
+            }
+        }
+        if (![defaults boolForKey:MAGICKA_DEFAULT_KEY]) {
+            if ([self isMagicka:string]) {
+                [currentPotions removeObject:string];
+            }
+        }
+        if (![defaults boolForKey:MELEE_DEFAULT_KEY]) {
+            if ([self isMelee:string]) {
+                [currentPotions removeObject:string];
+            }
+        }
+        if (![defaults boolForKey:STEALTH_DEFAULT_KEY]) {
+            if ([self isStealth:string]) {
+                [currentPotions removeObject:string];
+            }
+        }
+        if (![defaults boolForKey:MISCELLANY_DEFAULT_KEY]) {
+            if ([self isMiscellany:string]) {
+                [currentPotions removeObject:string];
+            }
+        }
+    }
+    return currentPotions;
 }
 -(int)getPotionsCount{
     return [self.potions count];
-}
--(int)getPotionsWithoutPoisonsCount
-{
-    return [self.potionsWithoutPoisons count];
-}
--(NSMutableArray *)getPotionsWithoutPoisons
-{
-    return self.potionsWithoutPoisons;
-}
--(NSMutableArray *)getPoisonsWithoutPotions
-{
-    return self.poisonsWithoutPotions;
-}
--(int)getPoisonsWithoutPotionsCount
-{
-    return [self.poisonsWithoutPotions count];
-}
--(NSMutableArray *)getPotionsWithoutPoisonsOrMagicka
-{
-    return self.potionsWithoutPoisonsOrMagicka;
 }
 -(NSString *)getPotion:(int)i{
     return [self.potions objectAtIndex:i];
